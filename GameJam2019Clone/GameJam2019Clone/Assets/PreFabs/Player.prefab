@@ -257,6 +257,8 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 97e1a970b2a575b4ca716203e3cc7241, type: 2}
   - {fileID: 7400000, guid: b37d11fb1c327bb4495567d83052a099, type: 2}
+  - {fileID: 7400000, guid: 66d57588be146614293942a5ca591d24, type: 2}
+  - {fileID: 7400000, guid: 598e71ff7ebc9bf4a8f42b5f533fa5e6, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -281,6 +283,7 @@ MonoBehaviour:
   hasMediumPot: 0
   hasLargePot: 0
   speed: 15
+  potRechargeTime: 5
   moving10: {fileID: 8300000, guid: 9d7721d2ecc910a45b9e7593530fba52, type: 3}
   smallPot: {fileID: 1057811713549680, guid: c1ec9df67c7310e47a36d3477acde5cb, type: 2}
   mediumPot: {fileID: 1731050170249370, guid: 61d6866bb33c247418c5708d41ed3e1f, type: 2}

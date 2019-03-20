@@ -30,7 +30,7 @@ public class PlayerBehaviour : MonoBehaviour {
     public GameObject mediumPot;
     public GameObject largePot;
 
-	void Start () {
+    void Start() {
         rigidbody2D = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
@@ -39,25 +39,17 @@ public class PlayerBehaviour : MonoBehaviour {
         findPots();
     }
 
-    void FixedUpdate () {
+    void FixedUpdate() {
         //movement
         Vector2 moveSpeed = new Vector2(Input.GetAxis("Horizontal") * speed * Time.deltaTime, Input.GetAxis("Vertical") * speed * Time.deltaTime);
         rigidbody2D.MovePosition(rigidbody2D.position + moveSpeed);
 
-        //standing still
-        if(Input.anyKey == false) {
-            animation.Stop("Walking");
-            if (right) {
-                transform.localScale = new Vector3(-1, 1, 1);
-                animator.Play("Idle");
-                audioSource.Stop();
-            } else {
-               transform.localScale = new Vector3(1, 1, 1);
-                animator.Play("Idle");
-                audioSource.Stop();
-            }
-
-            findPots();
+        //idle
+        if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
+            IdleAnimation("Idle");
+        } else {
+            Debug.Log("BOB");
+            IdleAnimation("IdlePot");
         }
 
         //separate sound input because of GetKey
@@ -72,21 +64,16 @@ public class PlayerBehaviour : MonoBehaviour {
             audioSource.Play();
         }
 
-        //walking animation
-        if (Input.GetKey(KeyCode.A)) {
-            transform.localScale = new Vector3(1, 1, 1);
-            animator.Play("Walking");
-            right = false;
+        //walking
+        if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
+            WalkingAnimation("Walking");
+        } else {
+            WalkingAnimation("WalkingPot");
         }
 
-        if (Input.GetKey(KeyCode.D)) {
-            transform.localScale = new Vector3(-1, 1, 1);
-            animator.Play("Walking");
-            right = true;
-        }
         //pick up pots
         if (Input.GetKeyDown(KeyCode.F)) {
-            if(canPickUpSmallPot){
+            if (canPickUpSmallPot) {
                 Destroy(smallPot);
                 hasSmallPot = true;
                 SpawnPots.spawnSmallPot = true;
@@ -107,6 +94,41 @@ public class PlayerBehaviour : MonoBehaviour {
         }
     }
 
+    //walking
+    public void WalkingAnimation(string animation) {
+        if (Input.GetKey(KeyCode.A)) {
+            transform.localScale = new Vector3(1, 1, 1);
+            animator.Play(animation);
+            right = false;
+        }
+
+        if (Input.GetKey(KeyCode.D)) {
+            transform.localScale = new Vector3(-1, 1, 1);
+            animator.Play(animation);
+            right = true;
+        }
+    }
+
+    //standing still
+    public void IdleAnimation(string animationToPlay) {
+        if (Input.anyKey == false) {
+            animation.Stop("Walking");
+            animation.Stop("WalkingPot");
+            animation.Stop("Idle");
+            if (right) {
+                transform.localScale = new Vector3(-1, 1, 1);
+                animator.Play(animationToPlay);
+                audioSource.Stop();
+            } else {
+                transform.localScale = new Vector3(1, 1, 1);
+                animator.Play(animationToPlay);
+                audioSource.Stop();
+            }
+            findPots();
+        }
+    }
+
+    //check if you are touching the pots
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("SmallPot")) {
             canPickUpSmallPot = true;
@@ -119,6 +141,7 @@ public class PlayerBehaviour : MonoBehaviour {
         }
     }
 
+    //check if not touching pots
     private void OnTriggerExit2D(Collider2D other) {
         canPickUpSmallPot = false;
         canPickUpMediumPot = false;
