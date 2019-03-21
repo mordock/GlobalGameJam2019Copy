@@ -12,10 +12,10 @@ public class RockSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        minY = background.border.y;
-        maxY = background.border.w;
-        minX = background.border.x;
-        maxX = background.border.z - 20;
+        //minY = background.border.y;
+        //maxY = background.border.w;
+        //minX = background.border.x;
+        //maxX = background.border.z - 20;
 	}
 	
 	// Update is called once per frame
