@@ -172,17 +172,20 @@ public class PlayerBehaviour : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("SmallPot")) {
             canPickUpSmallPot = true;
-            fObject = Instantiate(fPrefab, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 2), Quaternion.identity, transform);
+            //spawn floating F
+            fObject = Instantiate(fPrefab, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 5), Quaternion.identity, transform);
             isFobject = true;
         }
         if (collision.CompareTag("MediumPot")) {
             canPickUpMediumPot = true;
-            fObject = Instantiate(fPrefab, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 2), Quaternion.identity, transform);
+            //spawn floating F
+            fObject = Instantiate(fPrefab, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 5), Quaternion.identity, transform);
             isFobject = true;
         }
         if (collision.CompareTag("LargePot")) {
             canPickUpLargePot = true;
-            fObject = Instantiate(fPrefab, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 2), Quaternion.identity, transform);
+            //spawn floating F
+            fObject = Instantiate(fPrefab, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 5), Quaternion.identity, transform);
             isFobject = true;
         }
     }
