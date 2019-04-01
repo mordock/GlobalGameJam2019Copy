@@ -11,7 +11,7 @@ public class SpawnPots : MonoBehaviour {
 
     public static bool spawnSmallPot = true, spawnMediumPot = true, spawnLargePot = true;
 
-    public static float smallTime = 5f, mediumTime = 5f, largeTime = 5f;
+    public static float smallTime = 3f, mediumTime = 3f, largeTime = 3f;
 
     // Use this for initialization
     void Start () {
