@@ -93,4 +93,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPos: {x: 0, y: 0, z: 0}
+  shadow: {fileID: 2187000729094252390, guid: 267341bb4a909434e93c88dcee3d0718, type: 3}
   isSpawned: 0

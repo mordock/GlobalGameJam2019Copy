@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RockBehaviour : MonoBehaviour {
-    private float speed = 10;
+    private float speed = 15;
     public Vector3 targetPos;
+    public GameObject shadow;
+    GameObject newShadow;
 
     GameObject spawner;
     RockSpawner rockSpawner;
@@ -19,6 +21,8 @@ public class RockBehaviour : MonoBehaviour {
             targetPos = rockSpawner.randomPos;
             isSpawned = true;
         }
+
+        newShadow = Instantiate(shadow, targetPos, Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -27,6 +31,7 @@ public class RockBehaviour : MonoBehaviour {
 
         if(Vector3.Distance(transform.position, targetPos) <= 0.1f) {
             Destroy(this.gameObject);
+            Destroy(newShadow);
         }
     }
 }
