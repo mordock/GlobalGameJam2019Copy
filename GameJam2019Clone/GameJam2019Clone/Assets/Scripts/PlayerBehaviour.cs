@@ -23,6 +23,11 @@ public class PlayerBehaviour : MonoBehaviour {
     public bool hasMediumPot = false;
     public bool hasLargePot = false;
 
+    [Header("Speed multipliers")]
+    public float smallPotMultiplier = .8f;
+    public float mediumPotMultiplier = .6f;
+    public float largePotMultiplier = .4f;
+
     [Header("GameObjects")]
     public GameObject fPrefab;
 
@@ -50,8 +55,22 @@ public class PlayerBehaviour : MonoBehaviour {
 
     void FixedUpdate() {
         //movement
-        Vector2 moveSpeed = new Vector2(Input.GetAxis("Horizontal") * speed * Time.deltaTime, Input.GetAxis("Vertical") * speed * Time.deltaTime);
-        rigidbody2D.MovePosition(rigidbody2D.position + moveSpeed);
+        if (Input.GetKey(KeyCode.D)) {
+            transform.position += Vector3.right * speed * Time.deltaTime;
+        }
+
+        if (Input.GetKey(KeyCode.A)) {
+            transform.position += Vector3.left * speed * Time.deltaTime;
+        }
+
+        if (Input.GetKey(KeyCode.W)) {
+            transform.position += Vector3.up * speed * Time.deltaTime;
+        }
+
+        if (Input.GetKey(KeyCode.S)) {
+            transform.position += Vector3.down * speed * Time.deltaTime;
+
+        }
 
         //idle
         if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
@@ -95,25 +114,31 @@ public class PlayerBehaviour : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.F)) {
             if (canPickUpSmallPot) {
                 Destroy(smallPot);
+
                 hasSmallPot = true;
                 hasMediumPot = false;
                 hasLargePot = false;
+
                 SpawnPots.spawnSmallPot = true;
                 SpawnPots.smallTime = potRechargeTime;
             }
             if (canPickUpMediumPot) {
                 Destroy(mediumPot);
+
                 hasMediumPot = true;
                 hasSmallPot = false;
                 hasLargePot = false;
+
                 SpawnPots.spawnMediumPot = true;
                 SpawnPots.mediumTime = potRechargeTime;
             }
             if (canPickUpLargePot) {
                 Destroy(largePot);
+
                 hasLargePot = true;
                 hasSmallPot = false;
                 hasMediumPot = false;
+
                 SpawnPots.spawnLargePot = true;
                 SpawnPots.largeTime = potRechargeTime;
             }
@@ -135,7 +160,7 @@ public class PlayerBehaviour : MonoBehaviour {
         audioSource.Play();
     }
 
-    //walking
+    //walking animation
     public void WalkingAnimation(string animation) {
         if (Input.GetKey(KeyCode.A)) {
             transform.localScale = new Vector3(1, 1, 1);
@@ -168,6 +193,7 @@ public class PlayerBehaviour : MonoBehaviour {
             FindPots();
         }
     }
+
     //check if you are touching the pots
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("SmallPot")) {
