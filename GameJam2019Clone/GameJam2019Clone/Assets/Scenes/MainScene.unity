@@ -341,6 +341,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 931242082}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &497594388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497594387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b856394da3cb6fe44b065464e81afacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2077,13 +2089,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab25c7fa2d1de5e44ac411e50ecee409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 0.15
+  totalTime: 0.13
   rock:
   - {fileID: 1765895375832260, guid: 4da61a51f812e9b4ab9ab6f7c7bad483, type: 3}
   - {fileID: 1683305015910864, guid: f24c154e3e60dd94d8dabdb01bf16af4, type: 3}
   - {fileID: 1979795223467658, guid: ed20295a40e44af45aacaf410df44f2d, type: 3}
-  center: {x: -26.88, y: -6.15, z: 0}
-  size: {x: 75, y: 18, z: 0}
+  center: {x: -27.48, y: -6, z: 0}
+  size: {x: 77, y: 18, z: 0}
   randomPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1972266809
 GameObject:

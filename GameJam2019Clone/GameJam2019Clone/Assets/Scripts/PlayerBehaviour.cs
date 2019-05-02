@@ -9,7 +9,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public Animator animator;
 
-    public bool right = false;
+    public bool facingRight = false;
     public float speed = 20;
     public float potRechargeTime = 5f;
     public bool isFobject = false;
@@ -145,7 +145,7 @@ public class PlayerBehaviour : MonoBehaviour {
         }
 
         if (isFobject) {
-            if (right) {
+            if (facingRight) {
                 fObject.transform.localScale = new Vector3(-1, 1, 1);
             } else {
                 fObject.transform.localScale = new Vector3(1, 1, 1);
@@ -165,13 +165,13 @@ public class PlayerBehaviour : MonoBehaviour {
         if (Input.GetKey(KeyCode.A)) {
             transform.localScale = new Vector3(1, 1, 1);
             animator.Play(animation);
-            right = false;
+            facingRight = false;
         }
 
         if (Input.GetKey(KeyCode.D)) {
             transform.localScale = new Vector3(-1, 1, 1);
             animator.Play(animation);
-            right = true;
+            facingRight = true;
         }
     }
 
@@ -181,7 +181,7 @@ public class PlayerBehaviour : MonoBehaviour {
             animation.Stop("Walking");
             animation.Stop("WalkingPot");
             animation.Stop("Idle");
-            if (right) {
+            if (facingRight) {
                 transform.localScale = new Vector3(-1, 1, 1);
                 animator.Play(animationToPlay);
                 audioSource.Stop();
