@@ -146,7 +146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.88963944, y: 0}
   m_AnchorMax: {x: 1, y: 0.10357978}
-  m_AnchoredPosition: {x: 12.9999695, y: -1.6199951}
+  m_AnchoredPosition: {x: 13, y: -1.6199951}
   m_SizeDelta: {x: 25, y: -2.9000244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &256931493
@@ -1091,20 +1091,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114829633355286438, guid: feacabe4dd55fe84e97eb594cda32884,
-        type: 3}
-      propertyPath: pushVelocity
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 50291752884841018, guid: feacabe4dd55fe84e97eb594cda32884,
-        type: 3}
-      propertyPath: m_LinearDrag
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feacabe4dd55fe84e97eb594cda32884, type: 3}
 --- !u!1 &1100919413
@@ -1520,7 +1506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1440646490
 MonoBehaviour:
   m_ObjectHideFlags: 0

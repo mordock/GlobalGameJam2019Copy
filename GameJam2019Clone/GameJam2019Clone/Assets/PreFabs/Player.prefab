@@ -120,10 +120,21 @@ MonoBehaviour:
   moving10: {fileID: 8300000, guid: 9d7721d2ecc910a45b9e7593530fba52, type: 3}
   moving6: {fileID: 8300000, guid: c3c5d262605461c44a1274c26aef0d06, type: 3}
   moving4: {fileID: 8300000, guid: 12cb88a88e178e047a3158485ab13301, type: 3}
+  rockHitSounds:
+  - {fileID: 8300000, guid: 7ae3acb49e7361741b29d2d7c444aa9c, type: 3}
+  - {fileID: 8300000, guid: 0845064739a88bf4c8d35d40b282b396, type: 3}
+  - {fileID: 8300000, guid: 37819fe00e89f404bb73e43020e4efc6, type: 3}
+  - {fileID: 8300000, guid: cfeb04cb1e6aab041825bbec9ed9d305, type: 3}
+  - {fileID: 8300000, guid: 41a770b183c878b46bb2c40dad968605, type: 3}
+  potLiftSounds:
+  - {fileID: 8300000, guid: 39cc31e86e5128749828f6ee8e0390a9, type: 3}
+  - {fileID: 8300000, guid: 2744622fbffe880498cede8a18e08ba9, type: 3}
+  - {fileID: 8300000, guid: 0f3f6518ed19cb749828c1f4f4da41b8, type: 3}
+  - {fileID: 8300000, guid: 483d2663744b40149bd8630a35c388ac, type: 3}
   smallPot: {fileID: 1057811713549680, guid: c1ec9df67c7310e47a36d3477acde5cb, type: 3}
   mediumPot: {fileID: 1731050170249370, guid: 61d6866bb33c247418c5708d41ed3e1f, type: 3}
   largePot: {fileID: 1132661742353574, guid: 01a6a56ad3fedff4bb9ba485c0e6529d, type: 3}
-  pushVelocity: 0
+  pushVelocity: 40
 --- !u!50 &50291752884841018
 Rigidbody2D:
   serializedVersion: 4
@@ -137,7 +148,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 4
+  m_LinearDrag: 5
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}

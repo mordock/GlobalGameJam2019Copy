@@ -38,6 +38,8 @@ public class PlayerBehaviour : MonoBehaviour {
     //public AudioClip moving8;
     public AudioClip moving6;
     public AudioClip moving4;
+    public List<AudioClip> rockHitSounds;
+    public List<AudioClip> potLiftSounds;
 
     [Header("Pots")]
     public GameObject smallPot;
@@ -230,6 +232,8 @@ public class PlayerBehaviour : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag.Equals("Rock")) {
+            audioSource.clip = rockHitSounds[Random.Range(0, rockHitSounds.Count)];
+            audioSource.Play();
             //calculate direction to be knocked back to
             Vector3 direction = transform.position - collision.gameObject.transform.position;
             direction.Normalize();
