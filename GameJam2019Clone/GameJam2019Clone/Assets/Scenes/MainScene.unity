@@ -341,18 +341,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 931242082}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &497594388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497594387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b856394da3cb6fe44b065464e81afacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,11 +986,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 111572638563886134, guid: feacabe4dd55fe84e97eb594cda32884,
-        type: 3}
-      propertyPath: m_Animations.Array.data[2]
-      value: 
-      objectReference: {fileID: 7400000, guid: 66d57588be146614293942a5ca591d24, type: 2}
     - target: {fileID: 3160778949171853276, guid: feacabe4dd55fe84e97eb594cda32884,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1107,6 +1090,20 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114829633355286438, guid: feacabe4dd55fe84e97eb594cda32884,
+        type: 3}
+      propertyPath: pushVelocity
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 50291752884841018, guid: feacabe4dd55fe84e97eb594cda32884,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feacabe4dd55fe84e97eb594cda32884, type: 3}

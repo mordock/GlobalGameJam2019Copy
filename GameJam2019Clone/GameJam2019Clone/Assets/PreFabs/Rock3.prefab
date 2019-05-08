@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4133571301232376}
   - component: {fileID: 212225253719346344}
   - component: {fileID: 6196211000674689825}
+  - component: {fileID: 7917175743957190738}
   m_Layer: 0
   m_Name: Rock3
   m_TagString: Rock
@@ -97,6 +98,50 @@ MonoBehaviour:
   targetPos: {x: 0, y: 0, z: 0}
   shadow: {fileID: 2187000729094252390, guid: 267341bb4a909434e93c88dcee3d0718, type: 3}
   isSpawned: 0
+--- !u!60 &7917175743957190738
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979795223467658}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.72, y: 1.6}
+    newSize: {x: 1.72, y: 1.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.77, y: -0.01}
+      - {x: 0.77, y: 0.049999997}
+      - {x: 0.62, y: 0.34}
+      - {x: 0.21, y: 0.57}
+      - {x: -0.16, y: 0.71}
+      - {x: -0.22999999, y: 0.71}
+      - {x: -0.5, y: 0.61}
+      - {x: -0.65, y: 0.45}
+      - {x: -0.68, y: 0.37}
+      - {x: -0.7, y: -0.06}
+      - {x: -0.7, y: -0.26999998}
+      - {x: -0.68, y: -0.42}
+      - {x: -0.47, y: -0.61}
+      - {x: -0.04, y: -0.7}
+      - {x: 0.24, y: -0.7}
+      - {x: 0.35999998, y: -0.69}
+      - {x: 0.62, y: -0.62}
+      - {x: 0.66999996, y: -0.38}
+      - {x: 0.63, y: -0.31}
 --- !u!1 &6304432071213502330
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,11 +154,11 @@ GameObject:
   - component: {fileID: 5718311749945895347}
   m_Layer: 0
   m_Name: ColliderLeft
-  m_TagString: Untagged
+  m_TagString: Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &963109934510310967
 Transform:
   m_ObjectHideFlags: 0
@@ -174,11 +219,11 @@ GameObject:
   - component: {fileID: 7196094189857142088}
   m_Layer: 0
   m_Name: ColliderRight
-  m_TagString: Untagged
+  m_TagString: Right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2692831448114696573
 Transform:
   m_ObjectHideFlags: 0

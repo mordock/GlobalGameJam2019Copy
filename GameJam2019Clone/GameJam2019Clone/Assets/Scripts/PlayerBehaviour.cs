@@ -44,12 +44,15 @@ public class PlayerBehaviour : MonoBehaviour {
     public GameObject mediumPot;
     public GameObject largePot;
 
+    public float pushVelocity;
+
     void Start() {
         rigidbody2D = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         animation = this.gameObject.GetComponent<Animation>();
 
+        //fill pot variables so they can be picked up
         FindPots();
     }
 
@@ -223,6 +226,17 @@ public class PlayerBehaviour : MonoBehaviour {
         canPickUpLargePot = false;
         isFobject = false;
         Destroy(fObject);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag.Equals("Rock")) {
+            //calculate direction to be knocked back to
+            Vector3 direction = transform.position - collision.gameObject.transform.position;
+            direction.Normalize();
+            rigidbody2D.velocity = direction * pushVelocity;
+
+            Destroy(collision.gameObject);
+        }
     }
 
     //add a pot to the player if one excists in the scene

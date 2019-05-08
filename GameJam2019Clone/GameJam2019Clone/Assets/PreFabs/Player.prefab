@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  right: 0
+  facingRight: 0
   speed: 15
   potRechargeTime: 5
   isFobject: 0
@@ -113,6 +113,9 @@ MonoBehaviour:
   hasSmallPot: 0
   hasMediumPot: 0
   hasLargePot: 0
+  smallPotMultiplier: 0.8
+  mediumPotMultiplier: 0.6
+  largePotMultiplier: 0.4
   fPrefab: {fileID: 4029962043388542282, guid: 0ce992c9f056fd64c924e13029fd9a04, type: 3}
   moving10: {fileID: 8300000, guid: 9d7721d2ecc910a45b9e7593530fba52, type: 3}
   moving6: {fileID: 8300000, guid: c3c5d262605461c44a1274c26aef0d06, type: 3}
@@ -120,6 +123,7 @@ MonoBehaviour:
   smallPot: {fileID: 1057811713549680, guid: c1ec9df67c7310e47a36d3477acde5cb, type: 3}
   mediumPot: {fileID: 1731050170249370, guid: 61d6866bb33c247418c5708d41ed3e1f, type: 3}
   largePot: {fileID: 1132661742353574, guid: 01a6a56ad3fedff4bb9ba485c0e6529d, type: 3}
+  pushVelocity: 0
 --- !u!50 &50291752884841018
 Rigidbody2D:
   serializedVersion: 4
@@ -133,8 +137,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 4
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -240,7 +244,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 97e1a970b2a575b4ca716203e3cc7241, type: 2}
   - {fileID: 7400000, guid: b37d11fb1c327bb4495567d83052a099, type: 2}
-  - {fileID: 0}
+  - {fileID: 7400000, guid: c46b804469d17d742b2acc4276b3c809, type: 2}
   - {fileID: 7400000, guid: 598e71ff7ebc9bf4a8f42b5f533fa5e6, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0

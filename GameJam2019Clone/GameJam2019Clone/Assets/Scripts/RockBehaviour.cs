@@ -23,13 +23,16 @@ public class RockBehaviour : MonoBehaviour {
         }
 
         newShadow = Instantiate(shadow, targetPos, Quaternion.identity);
+        newShadow.transform.parent = gameObject.transform;
     }
 
-    // Update is called once per frame
     void Update() {
+        //keep resetting the shadow position to make sure it stands still
+        newShadow.transform.position = targetPos;
+
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
 
-        if(Vector3.Distance(transform.position, targetPos) <= 0.1f) {
+        if (Vector3.Distance(transform.position, targetPos) <= 0.1f) {
             Destroy(this.gameObject);
             Destroy(newShadow);
         }
