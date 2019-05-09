@@ -23,6 +23,8 @@ public class PlayerBehaviour : MonoBehaviour {
     public bool hasMediumPot = false;
     public bool hasLargePot = false;
 
+    public bool isOnBoat = false;
+
     [Header("Speed multipliers")]
     public float smallPotMultiplier = .8f;
     public float mediumPotMultiplier = .6f;
@@ -45,6 +47,10 @@ public class PlayerBehaviour : MonoBehaviour {
     public GameObject smallPot;
     public GameObject mediumPot;
     public GameObject largePot;
+
+    public int smallPotPoints;
+    public int mediumPotPoints;
+    public int largePotPoints;
 
     public float pushVelocity;
 
@@ -147,6 +153,22 @@ public class PlayerBehaviour : MonoBehaviour {
                 SpawnPots.spawnLargePot = true;
                 SpawnPots.largeTime = potRechargeTime;
             }
+
+            if (isOnBoat) {
+                if (hasSmallPot) {
+                    ScoreKeeper.IncreaseScore(smallPotPoints);
+                    hasSmallPot = false;
+                    Debug.Log("small pot");
+                } else if (hasMediumPot) {
+                    ScoreKeeper.IncreaseScore(mediumPotPoints);
+                    hasMediumPot = false;
+                    Debug.Log("medium pot");
+                } else if (hasLargePot) {
+                    ScoreKeeper.IncreaseScore(largePotPoints);
+                    hasLargePot = false;
+                    Debug.Log("large pot");
+                }
+            }
         }
 
         if (isFobject) {
@@ -219,6 +241,11 @@ public class PlayerBehaviour : MonoBehaviour {
             fObject = Instantiate(fPrefab, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 5), Quaternion.identity, transform);
             isFobject = true;
         }
+
+        //check if standing on the boat
+        if (collision.gameObject.tag.Equals("Boat")) {
+            isOnBoat = true;
+        }
     }
 
     //check if not touching pots
@@ -228,6 +255,10 @@ public class PlayerBehaviour : MonoBehaviour {
         canPickUpLargePot = false;
         isFobject = false;
         Destroy(fObject);
+
+        if (other.gameObject.tag.Equals("Boat")) {
+            isOnBoat = false;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
@@ -240,6 +271,11 @@ public class PlayerBehaviour : MonoBehaviour {
             rigidbody2D.velocity = direction * pushVelocity;
 
             Destroy(collision.gameObject);
+
+            //drop pot
+            hasSmallPot = false;
+            hasMediumPot = false;
+            hasLargePot = false;
         }
     }
 

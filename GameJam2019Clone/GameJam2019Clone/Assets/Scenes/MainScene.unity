@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 550935255}
   m_Layer: 0
   m_Name: Boat
-  m_TagString: Untagged
+  m_TagString: Boat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -513,7 +513,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -892,6 +892,7 @@ GameObject:
   - component: {fileID: 917451252}
   - component: {fileID: 917451251}
   - component: {fileID: 917451253}
+  - component: {fileID: 917451254}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -975,6 +976,19 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7607843}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
+--- !u!114 &917451254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917451249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859afa3ef59d0bc4292f45a38367773b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 917451251}
 --- !u!1001 &931242082
 PrefabInstance:
   m_ObjectHideFlags: 0
