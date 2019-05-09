@@ -8,11 +8,20 @@ public class TimerScript : MonoBehaviour {
     private float totalTime = 90f;
     public Text text;
 
+    public GameObject endGameCanvas;
+    public GameObject staticCanvas;
+
+    private void Start() {
+        endGameCanvas.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update() {
         currentTime -= Time.deltaTime;
         if(currentTime <= 0) {
-            currentTime = totalTime;
+            Time.timeScale = 0;
+            endGameCanvas.SetActive(true);
+            staticCanvas.SetActive(false);
         }
         text.text = currentTime.ToString("0"); ;
     }

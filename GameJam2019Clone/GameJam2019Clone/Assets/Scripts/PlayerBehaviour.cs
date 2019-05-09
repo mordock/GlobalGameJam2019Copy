@@ -261,7 +261,9 @@ public class PlayerBehaviour : MonoBehaviour {
         }
     }
 
+
     void OnCollisionEnter2D(Collision2D collision) {
+        //collide with rock
         if (collision.gameObject.tag.Equals("Rock")) {
             audioSource.clip = rockHitSounds[Random.Range(0, rockHitSounds.Count)];
             audioSource.Play();
