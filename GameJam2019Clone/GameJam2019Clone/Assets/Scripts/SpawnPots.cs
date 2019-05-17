@@ -10,15 +10,18 @@ public class SpawnPots : MonoBehaviour {
     bool smallPotExists, MediumPotExists, LargePotExists;
 
     public static bool spawnSmallPot = true, spawnMediumPot = true, spawnLargePot = true;
+    public static float smallTime, mediumTime, largeTime;
 
-    public static float smallTime = 3f, mediumTime = 3f, largeTime = 3f;
+    public float smallSpawnTime = 5f, mediumSpawnTime = 5f, largeSpawnTime = 5f;
 
     // Use this for initialization
-    void Start () {
-		
-	}
+    void Start ()
+    {
+        smallTime = smallSpawnTime;
+        mediumTime = mediumSpawnTime;
+        largeTime = largeSpawnTime;
+    }
 	
-	// Update is called once per frame
 	void Update () {
         smallTime -= Time.deltaTime;
         mediumTime -= Time.deltaTime;
@@ -29,7 +32,6 @@ public class SpawnPots : MonoBehaviour {
                 clone = (GameObject) Instantiate(smallPot, new Vector3(19f,  -1.3f, -2f), Quaternion.identity);
                 clone.name = smallPot.name;
                 spawnSmallPot = false;
-                //smallTime = rechargeTime;
             }
         }
 
@@ -38,7 +40,6 @@ public class SpawnPots : MonoBehaviour {
                 clone = (GameObject)Instantiate(mediumPot, new Vector3(19f, -5f, -2f), Quaternion.identity);
                 clone.name = mediumPot.name;
                 spawnMediumPot = false;
-                //mediumTime = rechargeTime;
             }
         }
 
@@ -47,7 +48,6 @@ public class SpawnPots : MonoBehaviour {
                 clone = (GameObject)Instantiate(LargePot, new Vector3(19f, -10f, -2f), Quaternion.identity);
                 clone.name = LargePot.name;
                 spawnLargePot = false;
-                //largeTime = rechargeTime;
             }
         }
 	}
