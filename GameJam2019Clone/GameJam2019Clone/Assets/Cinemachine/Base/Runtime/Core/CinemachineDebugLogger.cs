@@ -18,10 +18,10 @@ namespace Cinemachine.Utility
 
         /// <summary>Reserve an on-screen rectangle for debugging output.</summary>
         /// <param name="client">The client caller.  This is used as a handle.</param>
-        /// <param name="text">Sample text, for determining rectangle size</param>
+        /// <param name="text">Sample Scoretext, for determining rectangle size</param>
         /// <param name="style">What style will be used to draw, used here for
         /// determining rect size</param>
-        /// <returns>An area on the game screen large enough to print the text
+        /// <returns>An area on the game screen large enough to print the Scoretext
         /// in the style indicated</returns>
         public static Rect GetScreenPos(Object client, string text, GUIStyle style)
         {

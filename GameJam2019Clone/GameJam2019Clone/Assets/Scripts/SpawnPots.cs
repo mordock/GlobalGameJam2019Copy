@@ -17,9 +17,13 @@ public class SpawnPots : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        //set values at the beginning of the game in case of a restart
         smallTime = smallSpawnTime;
         mediumTime = mediumSpawnTime;
         largeTime = largeSpawnTime;
+        spawnSmallPot = true;
+        spawnMediumPot = true;
+        spawnLargePot = true;
     }
 	
 	void Update () {

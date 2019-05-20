@@ -4,17 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreKeeper : MonoBehaviour {
-    public Text text;
+    public Text Scoretext;
+    public Text hightScoreText;
 
     public static int score = 0;
+    public static int hightScore;
+
+    void Start() {
+        score = 0;
+        Debug.Log(PlayerPrefs.GetInt("Highscore"));
+        hightScore = PlayerPrefs.GetInt("Highscore");
+    }
 
     // Update is called once per frame
     void Update() {
-        text.text = score.ToString();
+        Scoretext.text = score.ToString();
+        hightScoreText.text = hightScore.ToString();
     }
 
     public static void IncreaseScore(int points) {
         score += points;
     }
-
 }
