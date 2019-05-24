@@ -102,20 +102,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8d18343782bdc4dbffbbe025f392d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  facingRight: 0
   speed: 15
   potRechargeTime: 5
-  isFobject: 0
+  rockPushVelocity: 30
+  crabPushVelocity: 80
   canPickUpSmallPot: 0
   canPickUpMediumPot: 0
   canPickUpLargePot: 0
   hasSmallPot: 0
   hasMediumPot: 0
   hasLargePot: 0
-  smallPotMultiplier: 0.8
-  mediumPotMultiplier: 0.6
-  largePotMultiplier: 0.4
+  isFobject: 0
+  facingRight: 0
+  isOnBoat: 0
+  smallPotMultiplier: 0.9
+  mediumPotMultiplier: 0.75
+  largePotMultiplier: 0.6
   fPrefab: {fileID: 4029962043388542282, guid: 0ce992c9f056fd64c924e13029fd9a04, type: 3}
   moving10: {fileID: 8300000, guid: 9d7721d2ecc910a45b9e7593530fba52, type: 3}
   moving6: {fileID: 8300000, guid: c3c5d262605461c44a1274c26aef0d06, type: 3}
@@ -134,10 +136,9 @@ MonoBehaviour:
   smallPot: {fileID: 1057811713549680, guid: c1ec9df67c7310e47a36d3477acde5cb, type: 3}
   mediumPot: {fileID: 1731050170249370, guid: 61d6866bb33c247418c5708d41ed3e1f, type: 3}
   largePot: {fileID: 1132661742353574, guid: 01a6a56ad3fedff4bb9ba485c0e6529d, type: 3}
-  smallPotPoints: 5
-  mediumPotPoints: 10
-  largePotPoints: 15
-  pushVelocity: 40
+  smallPotPoints: 10
+  mediumPotPoints: 20
+  largePotPoints: 30
 --- !u!50 &50291752884841018
 Rigidbody2D:
   serializedVersion: 4

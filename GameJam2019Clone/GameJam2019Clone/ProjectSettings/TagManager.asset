@@ -11,6 +11,7 @@ TagManager:
   - Right
   - Left
   - Boat
+  - Crab
   layers:
   - Default
   - TransparentFX

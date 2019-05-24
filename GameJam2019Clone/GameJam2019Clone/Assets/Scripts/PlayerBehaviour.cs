@@ -5,15 +5,20 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour {
     private new Rigidbody2D rigidbody2D;
     new Animation animation;
+
     private AudioSource audioSource;
+    private Animator animator;
 
-    public Animator animator;
+    private GameObject fObject;
 
-    public bool facingRight = false;
+    private float modifier;
+
+    [Header("Floats")]
     public float speed = 20;
     public float potRechargeTime = 5f;
-    public bool isFobject = false;
-
+    public float rockPushVelocity;
+    public float crabPushVelocity;
+    
     [Header("Bools")]
     public bool canPickUpSmallPot = false;
     public bool canPickUpMediumPot = false;
@@ -23,6 +28,9 @@ public class PlayerBehaviour : MonoBehaviour {
     public bool hasMediumPot = false;
     public bool hasLargePot = false;
 
+    [Header("---------")]
+    public bool isFobject = false;
+    public bool facingRight = false;
     public bool isOnBoat = false;
 
     [Header("Speed multipliers")]
@@ -32,8 +40,6 @@ public class PlayerBehaviour : MonoBehaviour {
 
     [Header("GameObjects")]
     public GameObject fPrefab;
-
-    private GameObject fObject;
 
     [Header("Sounds")]
     public AudioClip moving10;
@@ -52,8 +58,6 @@ public class PlayerBehaviour : MonoBehaviour {
     public int mediumPotPoints;
     public int largePotPoints;
 
-    public float pushVelocity;
-
     void Start() {
         rigidbody2D = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
@@ -67,30 +71,35 @@ public class PlayerBehaviour : MonoBehaviour {
     void FixedUpdate() {
         //movement
         if (Input.GetKey(KeyCode.D)) {
-            transform.position += Vector3.right * speed * Time.deltaTime;
+            transform.position += Vector3.right * speed * modifier * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.A)) {
-            transform.position += Vector3.left * speed * Time.deltaTime;
+            transform.position += Vector3.left * speed * modifier * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.W)) {
-            transform.position += Vector3.up * speed * Time.deltaTime;
+            transform.position += Vector3.up * speed * modifier * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.S)) {
-            transform.position += Vector3.down * speed * Time.deltaTime;
+            transform.position += Vector3.down * speed * modifier * Time.deltaTime;
 
         }
 
-        //idle
+        if (!hasLargePot && !hasMediumPot && !hasSmallPot)
+        {
+            modifier = 1;
+        }
+
+        //idle animation
         if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
             IdleAnimation("Idle");
         } else {
             IdleAnimation("IdlePot");
         }
 
-        //separate sound input because of GetKey
+        //P separate sound input because of GetKey
         if (Input.GetKeyDown(KeyCode.A)) {
             if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
                 PlayWalkingSound(moving10);
@@ -114,7 +123,7 @@ public class PlayerBehaviour : MonoBehaviour {
             }
         }
 
-        //walking
+        //walking animation
         if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
             WalkingAnimation("Walking");
         } else {
@@ -130,6 +139,8 @@ public class PlayerBehaviour : MonoBehaviour {
                 hasMediumPot = false;
                 hasLargePot = false;
 
+                modifier = smallPotMultiplier;
+
                 SpawnPots.spawnSmallPot = true;
                 SpawnPots.smallTime = potRechargeTime;
             }
@@ -139,6 +150,8 @@ public class PlayerBehaviour : MonoBehaviour {
                 hasMediumPot = true;
                 hasSmallPot = false;
                 hasLargePot = false;
+
+                modifier = mediumPotMultiplier;
 
                 SpawnPots.spawnMediumPot = true;
                 SpawnPots.mediumTime = potRechargeTime;
@@ -150,10 +163,13 @@ public class PlayerBehaviour : MonoBehaviour {
                 hasSmallPot = false;
                 hasMediumPot = false;
 
+                modifier = largePotMultiplier;
+
                 SpawnPots.spawnLargePot = true;
                 SpawnPots.largeTime = potRechargeTime;
             }
 
+            //check if on the boat and if you have a pot to score points
             if (isOnBoat) {
                 if (hasSmallPot) {
                     ScoreKeeper.IncreaseScore(smallPotPoints);
@@ -171,6 +187,7 @@ public class PlayerBehaviour : MonoBehaviour {
             }
         }
 
+        //make sure the F stays the correct way
         if (isFobject) {
             if (facingRight) {
                 fObject.transform.localScale = new Vector3(-1, 1, 1);
@@ -180,7 +197,7 @@ public class PlayerBehaviour : MonoBehaviour {
         }
     }
 
-    //walking sound
+    //P walking sound
     public void PlayWalkingSound(AudioClip audioClip) {
         audioSource.clip = audioClip;
         audioSource.loop = true;
@@ -221,8 +238,9 @@ public class PlayerBehaviour : MonoBehaviour {
         }
     }
 
-    //check if you are touching the pots
+    //check for all triggers
     private void OnTriggerEnter2D(Collider2D collision) {
+        //check if you are touching the pots
         if (collision.CompareTag("SmallPot")) {
             canPickUpSmallPot = true;
             //spawn floating F
@@ -248,20 +266,22 @@ public class PlayerBehaviour : MonoBehaviour {
         }
     }
 
-    //check if not touching pots
+    //check if exiting any trigger
     private void OnTriggerExit2D(Collider2D other) {
+        //check if not touching pots
         canPickUpSmallPot = false;
         canPickUpMediumPot = false;
         canPickUpLargePot = false;
         isFobject = false;
         Destroy(fObject);
 
+        //check if exiting boat
         if (other.gameObject.tag.Equals("Boat")) {
             isOnBoat = false;
         }
     }
 
-
+    //P Check for all collisions
     void OnCollisionEnter2D(Collision2D collision) {
         //collide with rock
         if (collision.gameObject.tag.Equals("Rock")) {
@@ -270,9 +290,21 @@ public class PlayerBehaviour : MonoBehaviour {
             //calculate direction to be knocked back to
             Vector3 direction = transform.position - collision.gameObject.transform.position;
             direction.Normalize();
-            rigidbody2D.velocity = direction * pushVelocity;
+            rigidbody2D.velocity = direction * rockPushVelocity;
 
             Destroy(collision.gameObject);
+
+            //drop pot
+            hasSmallPot = false;
+            hasMediumPot = false;
+            hasLargePot = false;
+        }
+
+        if (collision.gameObject.tag.Equals("Crab"))
+        {
+            Vector3 direction = transform.position - collision.gameObject.transform.position;
+            direction.Normalize();
+            rigidbody2D.velocity = direction * crabPushVelocity;
 
             //drop pot
             hasSmallPot = false;

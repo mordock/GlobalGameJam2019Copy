@@ -26,7 +26,7 @@ public class RockBehaviour : MonoBehaviour {
         newShadow.transform.parent = gameObject.transform;
     }
 
-    void Update() {
+    void FixedUpdate() {
         //keep resetting the shadow position to make sure it stands still
         newShadow.transform.position = targetPos;
 

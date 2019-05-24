@@ -7,7 +7,8 @@ public class TimerScript : MonoBehaviour {
     private float currentTime = 90f;
     public float totalTime = 90f;
     public Text text;
-    public Text endGameText;
+    public Text endGameTextScore;
+    public Text endGameTextHighScore;
 
     public GameObject endGameCanvas;
     public GameObject staticCanvas;
@@ -37,12 +38,12 @@ public class TimerScript : MonoBehaviour {
     }
 
     public void SetEndGameScore() {
-        endGameText.text = scoreValue.ToString();
+        endGameTextScore.text = scoreValue.ToString();
+        endGameTextHighScore.text = highscoreValue.ToString();
     }
 
     public void CheckHighScore() {
         if (scoreValue >= highscoreValue) {
-            Debug.Log("BOB");
             PlayerPrefs.SetInt("Highscore", scoreValue);
             PlayerPrefs.Save();
         }
