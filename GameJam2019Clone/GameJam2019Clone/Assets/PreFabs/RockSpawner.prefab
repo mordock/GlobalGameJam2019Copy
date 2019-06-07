@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7230708227087187548
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7230708227087187549}
+  - component: {fileID: 7230708227087187546}
+  m_Layer: 0
+  m_Name: RockSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7230708227087187549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7230708227087187548}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.6, y: 4.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7230708227087187546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7230708227087187548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab25c7fa2d1de5e44ac411e50ecee409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalTime: 0.13
+  rock:
+  - {fileID: 1765895375832260, guid: 4da61a51f812e9b4ab9ab6f7c7bad483, type: 3}
+  - {fileID: 1683305015910864, guid: f24c154e3e60dd94d8dabdb01bf16af4, type: 3}
+  - {fileID: 1979795223467658, guid: ed20295a40e44af45aacaf410df44f2d, type: 3}
+  center: {x: -27.6, y: -6, z: 0}
+  size: {x: 81.9, y: 18, z: 0}
+  randomPos: {x: 0, y: 0, z: 0}
