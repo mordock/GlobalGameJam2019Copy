@@ -33,7 +33,7 @@ public class SpawnPots : MonoBehaviour {
 
         if (spawnSmallPot) {
             if(smallTime <= 0){
-                clone = (GameObject) Instantiate(smallPot, new Vector3(19f,  -1.3f, -2f), Quaternion.identity);
+                clone = (GameObject) Instantiate(smallPot, new Vector3(19f,  -0.3f, -2f), Quaternion.identity);
                 clone.name = smallPot.name;
                 spawnSmallPot = false;
             }
@@ -49,7 +49,7 @@ public class SpawnPots : MonoBehaviour {
 
         if (spawnLargePot) {
             if(largeTime <= 0f) {
-                clone = (GameObject)Instantiate(LargePot, new Vector3(19f, -10f, -2f), Quaternion.identity);
+                clone = (GameObject)Instantiate(LargePot, new Vector3(19f, -11f, -2f), Quaternion.identity);
                 clone.name = LargePot.name;
                 spawnLargePot = false;
             }
