@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{45c8113a-d12f-4939-a08c-558848b008c8}">
+		<property name="assetPath">
+			<value>SFX/Pot Break/Pot4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.75</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a259973f-6bc4-4814-bd55-8b7345010053}</destination>
+		</relationship>
+	</object>
+</objects>
