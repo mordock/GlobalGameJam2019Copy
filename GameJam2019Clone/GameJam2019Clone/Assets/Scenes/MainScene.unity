@@ -1472,6 +1472,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 931242082}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &497594396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497594387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c7863fd0cc24cddafe1023336ab7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputsound: event:/Footsteps
+  walkingspeed: 0.25
 --- !u!1 &514273919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,6 +1808,7 @@ GameObject:
   - component: {fileID: 550935254}
   - component: {fileID: 550935253}
   - component: {fileID: 550935255}
+  - component: {fileID: 550935256}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Boat
@@ -1962,6 +1977,23 @@ PolygonCollider2D:
       - {x: -0.065, y: -2.2949998}
       - {x: 0.024999999, y: -2.205}
       - {x: 0.155, y: -2.235}
+--- !u!114 &550935256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550935252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Emitters:
+  - Target: {fileID: 867943460}
+    Params: []
+  TriggerEvent: 0
+  CollisionTag: 
 --- !u!1 &571450435
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,6 +3114,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 82259901004403844, guid: feacabe4dd55fe84e97eb594cda32884,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feacabe4dd55fe84e97eb594cda32884, type: 3}
