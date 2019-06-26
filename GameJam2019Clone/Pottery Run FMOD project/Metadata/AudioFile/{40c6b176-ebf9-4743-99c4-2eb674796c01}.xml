@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.00.00">
-	<object class="AudioFile" id="{9af7ffdc-769c-4178-9c41-8b8b051b2bf8}">
+	<object class="AudioFile" id="{40c6b176-ebf9-4743-99c4-2eb674796c01}">
 		<property name="assetPath">
-			<value>SFX/Footsteps/Moving4.wav</value>
+			<value>SFX/Footsteps/Gravel/Gravel_Footstep_9.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>7.8970521541950109</value>
+			<value>0.29691609977324263</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{a259973f-6bc4-4814-bd55-8b7345010053}</destination>
