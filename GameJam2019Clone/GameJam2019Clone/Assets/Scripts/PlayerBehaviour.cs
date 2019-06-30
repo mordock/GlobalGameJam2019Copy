@@ -100,28 +100,29 @@ public class PlayerBehaviour : MonoBehaviour {
         }
 
         //P separate sound input because of GetKey
-        if (Input.GetKeyDown(KeyCode.A)) {
-            if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
-                PlayWalkingSound(moving10);
-            } else if (hasSmallPot) {
-                //this moving sounds was lost, ask Pat for sound
-            } else if (hasMediumPot) {
-                PlayWalkingSound(moving6);
-            } else if (hasLargePot) {
-                PlayWalkingSound(moving4);
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.D)) {
-            if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
-                PlayWalkingSound(moving10);
-            } else if (hasSmallPot) {
-                //this moving sounds was lost, ask Pat for sound
-            } else if (hasMediumPot) {
-                PlayWalkingSound(moving6);
-            } else if (hasLargePot) {
-                PlayWalkingSound(moving4);
-            }
-        }
+        /* if (Input.GetKeyDown(KeyCode.A)) {
+             if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
+                 PlayWalkingSound(moving10);
+             } else if (hasSmallPot) {
+                 //this moving sounds was lost, ask Pat for sound
+             } else if (hasMediumPot) {
+                 PlayWalkingSound(moving6);
+             } else if (hasLargePot) {
+                 PlayWalkingSound(moving4);
+             }
+         }
+         if (Input.GetKeyDown(KeyCode.D)) {
+             if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
+                 PlayWalkingSound(moving10);
+             } else if (hasSmallPot) {
+                 //this moving sounds was lost, ask Pat for sound
+             } else if (hasMediumPot) {
+                 PlayWalkingSound(moving6);
+             } else if (hasLargePot) {
+                 PlayWalkingSound(moving4);
+             }
+         }
+         */
 
         //walking animation
         if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
@@ -198,12 +199,12 @@ public class PlayerBehaviour : MonoBehaviour {
     }
 
     //P walking sound
-    public void PlayWalkingSound(AudioClip audioClip) {
+    /*public void PlayWalkingSound(AudioClip audioClip) {
         audioSource.clip = audioClip;
         audioSource.loop = true;
         audioSource.Play();
     }
-
+    */
     //walking animation
     public void WalkingAnimation(string animation) {
         if (Input.GetKey(KeyCode.A)) {

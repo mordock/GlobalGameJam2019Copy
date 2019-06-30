@@ -27,7 +27,7 @@ MonoBehaviour:
   - {fileID: 114114557762902228}
   StringsBanks:
   - {fileID: 114209479226388598}
-  stringsBankWriteTime: 636971684450000000
+  stringsBankWriteTime: 636974911280000000
   cacheVersion: 3
 --- !u!114 &114031928038278176
 MonoBehaviour:
@@ -72,9 +72,9 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114405554408435626}
-  - {fileID: 114067767341461490}
-  - {fileID: 114344241042851924}
+  - {fileID: 114932542245631874}
+  - {fileID: 114967483041581446}
+  - {fileID: 114744352460923704}
   MinDistance: 0
   MaxDistance: 0
   Length: 520
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/pat/Unity Projects/GameJam2019Clone/GameJam2019Clone/Pottery Run FMOD
     project/Build/Desktop/Master.bank
-  lastModified: 636971684450000000
+  lastModified: 636974911280000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/pat/Unity Projects/GameJam2019Clone/GameJam2019Clone/Pottery Run FMOD
     project/Build/Desktop/Master.strings.bank
-  lastModified: 636971684450000000
+  lastModified: 636974911280000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -261,3 +261,54 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
+--- !u!114 &114744352460923704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Wood
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &114932542245631874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Water
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &114967483041581446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Gravel
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
