@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class CutSceneEnd : MonoBehaviour
 {
     private void OnEnable() {
-        SceneManager.LoadScene("MainScene");   
+        LevelChanger.startFade = true;
     }
 }
