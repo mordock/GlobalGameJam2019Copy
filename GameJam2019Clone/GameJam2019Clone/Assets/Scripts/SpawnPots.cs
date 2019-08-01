@@ -14,7 +14,6 @@ public class SpawnPots : MonoBehaviour {
 
     public float smallSpawnTime = 5f, mediumSpawnTime = 5f, largeSpawnTime = 5f;
 
-    // Use this for initialization
     void Start ()
     {
         //set values at the beginning of the game in case of a restart

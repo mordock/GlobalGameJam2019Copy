@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour {
     public GameObject player;
@@ -11,13 +9,12 @@ public class FollowPlayer : MonoBehaviour {
     private Vector2 screenBounds;
     private Vector2 rightBound, leftBound;
 
-    // Use this for initialization
     void Start() {
+        //make sure camera doesn't go below the playing field
         screenBounds =
             Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }
 
-    // Update is called once per frame
     void LateUpdate() {
         transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
     }

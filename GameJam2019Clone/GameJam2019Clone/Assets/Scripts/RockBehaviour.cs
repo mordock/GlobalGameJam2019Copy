@@ -13,7 +13,6 @@ public class RockBehaviour : MonoBehaviour {
 
     public bool isSpawned = false;
 
-    // Start is called before the first frame update
     void Start() {
         if (!isSpawned) {
             spawner = GameObject.Find("RockSpawner");
@@ -31,7 +30,7 @@ public class RockBehaviour : MonoBehaviour {
         newShadow.transform.position = targetPos;
 
         transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-
+        //destroy if it has reached its target
         if (Vector3.Distance(transform.position, targetPos) <= 0.1f) {
             Destroy(this.gameObject);
             Destroy(newShadow);

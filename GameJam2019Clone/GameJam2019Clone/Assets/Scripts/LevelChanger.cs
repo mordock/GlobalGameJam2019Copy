@@ -11,6 +11,7 @@ public class LevelChanger : MonoBehaviour
 
     private void Start() {
         startFade = false;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
