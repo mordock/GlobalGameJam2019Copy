@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{b3ab55f2-ac62-4235-909c-72ac2187747d}">
+		<property name="name">
+			<value>Gravel</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7ee9f93b-0c30-4ba9-93f1-6cb0666bcdba}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f98056b7-ab09-4cf2-8db3-b8cf97f9baf2}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f98056b7-ab09-4cf2-8db3-b8cf97f9baf2}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>3</value>
+		</property>
+	</object>
+</objects>

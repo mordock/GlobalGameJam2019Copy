@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{e118f1ae-137c-4b0c-807e-09a0625bf7c3}">
+		<property name="assetPath">
+			<value>SFX/Pot Break/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a259973f-6bc4-4814-bd55-8b7345010053}</destination>
+		</relationship>
+	</object>
+</objects>

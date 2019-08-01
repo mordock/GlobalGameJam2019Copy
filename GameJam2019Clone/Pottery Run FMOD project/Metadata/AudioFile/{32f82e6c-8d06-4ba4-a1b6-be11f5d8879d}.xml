@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{32f82e6c-8d06-4ba4-a1b6-be11f5d8879d}">
+		<property name="assetPath">
+			<value>SFX/Lift/Lift1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.62501133786848073</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a259973f-6bc4-4814-bd55-8b7345010053}</destination>
+		</relationship>
+	</object>
+</objects>

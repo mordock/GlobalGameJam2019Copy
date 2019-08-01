@@ -12,6 +12,7 @@ TagManager:
   - Left
   - Boat
   - Crab
+  - Gravel
   layers:
   - Default
   - TransparentFX
