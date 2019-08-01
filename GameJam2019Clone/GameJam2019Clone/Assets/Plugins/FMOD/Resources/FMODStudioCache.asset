@@ -13,21 +13,24 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114209479226388598}
-  - {fileID: 114114557762902228}
+  - {fileID: 114531386806314372}
+  - {fileID: 114099876522197604}
+  - {fileID: 114865612965298134}
+  - {fileID: 114928215332630494}
   EditorEvents:
-  - {fileID: 114703980056731662}
-  - {fileID: 114031928038278176}
-  - {fileID: 114569437407424526}
-  - {fileID: 114322038814648318}
-  - {fileID: 114582255372347160}
-  - {fileID: 114039908574852084}
+  - {fileID: 114834162082983564}
+  - {fileID: 114678801734630708}
+  - {fileID: 114577489860267586}
+  - {fileID: 114249786600046466}
+  - {fileID: 114664016510252586}
+  - {fileID: 114513455963618870}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 114114557762902228}
+  - {fileID: 114099876522197604}
+  - {fileID: 114865612965298134}
   StringsBanks:
-  - {fileID: 114209479226388598}
-  stringsBankWriteTime: 636974911280000000
+  - {fileID: 114531386806314372}
+  stringsBankWriteTime: 637002772823480087
   cacheVersion: 3
 --- !u!114 &114031928038278176
 MonoBehaviour:
@@ -95,6 +98,25 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &114099876522197604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Max\Desktop\GameJam2019Copy\GameJam2019Clone\Pottery Run FMOD project\Metadata\Bank\Master.bank
+  lastModified: 637002772823350431
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 2310304
+  Exists: 1
 --- !u!114 &114114557762902228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +157,30 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1088
   Exists: 1
+--- !u!114 &114249786600046466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Pot Break
+  guid: 8bf3570e643aef46b8cf8c31a25c2009
+  Banks:
+  - {fileID: 114099876522197604}
+  - {fileID: 114865612965298134}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2200
 --- !u!114 &114322038814648318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +221,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &114397985611301994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Water
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &114405554408435626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +255,49 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &114513455963618870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Pot lift
+  guid: ff86e4dce09d494ebe2294dc72492146
+  Banks:
+  - {fileID: 114099876522197604}
+  - {fileID: 114865612965298134}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &114531386806314372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Max\Desktop\GameJam2019Copy\GameJam2019Clone\Pottery Run FMOD project\Metadata\Bank\Master.strings.bank
+  lastModified: 637002772823480087
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1088
+  Exists: 1
 --- !u!114 &114569437407424526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,6 +314,30 @@ MonoBehaviour:
   guid: 59c5e08121c8f942bd475a93bfd7fe56
   Banks:
   - {fileID: 114114557762902228}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &114577489860267586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Pot deliver
+  guid: 59c5e08121c8f942bd475a93bfd7fe56
+  Banks:
+  - {fileID: 114099876522197604}
+  - {fileID: 114865612965298134}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -238,6 +368,57 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
+--- !u!114 &114664016510252586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Footsteps
+  guid: db02cfdd4814e240a09c54548dbcc340
+  Banks:
+  - {fileID: 114099876522197604}
+  - {fileID: 114865612965298134}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 114767950754315278}
+  - {fileID: 114821859908341328}
+  - {fileID: 114748245210929444}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 520
+--- !u!114 &114678801734630708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Gameplay Music
+  guid: 4688b750bc6a8f43b0fdb90bdaf9a430
+  Banks:
+  - {fileID: 114099876522197604}
+  - {fileID: 114865612965298134}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 94733
 --- !u!114 &114703980056731662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +459,153 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &114748245210929444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Wood
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &114767950754315278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Water
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &114813791860512360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Wood
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &114821859908341328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Gravel
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &114834162082983564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Damage
+  guid: 22ae3aecd8901444b55ea17bcce1b6b4
+  Banks:
+  - {fileID: 114099876522197604}
+  - {fileID: 114865612965298134}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &114865612965298134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Max\Desktop\GameJam2019Copy\GameJam2019Clone\Pottery Run FMOD project\Metadata\Bank\Desktop\Master.bank
+  lastModified: 637002772823350431
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 2310304
+  Exists: 1
+--- !u!114 &114909082270063830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Gravel
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &114928215332630494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Max\Desktop\GameJam2019Copy\GameJam2019Clone\Pottery Run FMOD project\Metadata\Bank\Desktop\Master.strings.bank
+  lastModified: 637002772823480087
+  LoadResult: 70
+  FileSizes:
+  - Name: 
+    Value: 1088
+  Exists: 1
 --- !u!114 &114932542245631874
 MonoBehaviour:
   m_ObjectHideFlags: 0
