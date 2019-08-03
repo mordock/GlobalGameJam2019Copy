@@ -175,15 +175,12 @@ public class PlayerBehaviour : MonoBehaviour {
                 if (hasSmallPot) {
                     ScoreKeeper.IncreaseScore(smallPotPoints);
                     hasSmallPot = false;
-                    Debug.Log("small pot");
                 } else if (hasMediumPot) {
                     ScoreKeeper.IncreaseScore(mediumPotPoints);
                     hasMediumPot = false;
-                    Debug.Log("medium pot");
                 } else if (hasLargePot) {
                     ScoreKeeper.IncreaseScore(largePotPoints);
                     hasLargePot = false;
-                    Debug.Log("large pot");
                 }
             }
         }
@@ -222,7 +219,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     //standing still
     public void IdleAnimation(string animationToPlay) {
-        if (Input.anyKey == false) {
+        if (!Input.anyKey ) {
             animation.Stop("Walking");
             animation.Stop("WalkingPot");
             animation.Stop("Idle");
@@ -237,6 +234,19 @@ public class PlayerBehaviour : MonoBehaviour {
             }
             FindPots();
         }
+    }
+
+    private void DropPots() {
+        hasSmallPot = false;
+        hasMediumPot = false;
+        hasLargePot = false;
+    }
+
+    //add a pot to the player if one excists in the scene
+    void FindPots() {
+        smallPot = GameObject.Find("SmallPotPrefab");
+        mediumPot = GameObject.Find("MediumPotPrefab");
+        largePot = GameObject.Find("LargePotPrefab");
     }
 
     //check for all triggers
@@ -288,6 +298,7 @@ public class PlayerBehaviour : MonoBehaviour {
         if (collision.gameObject.tag.Equals("Rock")) {
             audioSource.clip = rockHitSounds[Random.Range(0, rockHitSounds.Count)];
             audioSource.Play();
+
             //calculate direction to be knocked back to
             Vector3 direction = transform.position - collision.gameObject.transform.position;
             direction.Normalize();
@@ -295,10 +306,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
             Destroy(collision.gameObject);
 
-            //drop pot
-            hasSmallPot = false;
-            hasMediumPot = false;
-            hasLargePot = false;
+            DropPots();
         }
 
         if (collision.gameObject.tag.Equals("Crab"))
@@ -307,17 +315,7 @@ public class PlayerBehaviour : MonoBehaviour {
             direction.Normalize();
             rigidbody2D.velocity = direction * crabPushVelocity;
 
-            //drop pot
-            hasSmallPot = false;
-            hasMediumPot = false;
-            hasLargePot = false;
+            DropPots();
         }
-    }
-
-    //add a pot to the player if one excists in the scene
-    void FindPots() {
-        smallPot = GameObject.Find("SmallPotPrefab");
-        mediumPot = GameObject.Find("MediumPotPrefab");
-        largePot = GameObject.Find("LargePotPrefab");
     }
 }

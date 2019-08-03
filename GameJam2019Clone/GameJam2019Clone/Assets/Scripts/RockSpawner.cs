@@ -27,7 +27,7 @@ public class RockSpawner : MonoBehaviour {
         //select random rock
         int randomRock = Random.Range(0, 3);
 
-        GameObject newRock = Instantiate(rock[randomRock], new Vector3(randomPos.x, randomPos.y + 50, randomPos.z), Quaternion.identity);
+        Instantiate(rock[randomRock], new Vector3(randomPos.x, randomPos.y + 50, randomPos.z), Quaternion.identity);
     }
 
     private void OnDrawGizmosSelected() {
