@@ -6,8 +6,9 @@ public class LevelChanger : MonoBehaviour
     public Animator animator;
 
     public static bool startFade = false;
+    public static int levelToLoad;
 
-    private int levelToLoad;
+    //private int levelToLoad;
 
     private void Start() {
         startFade = false;
@@ -18,7 +19,7 @@ public class LevelChanger : MonoBehaviour
     void Update()
     {
         if (startFade) {
-            FadeToLevel(2);
+            FadeToLevel();
         }
     }
 
@@ -26,8 +27,7 @@ public class LevelChanger : MonoBehaviour
         startFade = true;
     }
 
-    public void FadeToLevel(int levelIndex) {
-        levelToLoad = levelIndex;
+    public void FadeToLevel() {
         animator.SetTrigger("Fade Out");
     }
 
