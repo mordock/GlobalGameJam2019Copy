@@ -11,7 +11,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     private GameObject fObject;
 
-    private float modifier;
+    private float speedModifier;
 
     [Header("Floats")]
     public float speed = 20;
@@ -71,25 +71,25 @@ public class PlayerBehaviour : MonoBehaviour {
     void FixedUpdate() {
         //movement
         if (Input.GetKey(KeyCode.D)) {
-            transform.position += Vector3.right * speed * modifier * Time.deltaTime;
+            transform.position += Vector3.right * speed * speedModifier * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.A)) {
-            transform.position += Vector3.left * speed * modifier * Time.deltaTime;
+            transform.position += Vector3.left * speed * speedModifier * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.W)) {
-            transform.position += Vector3.up * speed * modifier * Time.deltaTime;
+            transform.position += Vector3.up * speed * speedModifier * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.S)) {
-            transform.position += Vector3.down * speed * modifier * Time.deltaTime;
+            transform.position += Vector3.down * speed * speedModifier * Time.deltaTime;
 
         }
 
         if (!hasLargePot && !hasMediumPot && !hasSmallPot)
         {
-            modifier = 1;
+            speedModifier = 1;
         }
 
         //idle animation
@@ -140,7 +140,7 @@ public class PlayerBehaviour : MonoBehaviour {
                 hasMediumPot = false;
                 hasLargePot = false;
 
-                modifier = smallPotMultiplier;
+                speedModifier = smallPotMultiplier;
 
                 SpawnPots.spawnSmallPot = true;
                 SpawnPots.smallTime = potRechargeTime;
@@ -152,7 +152,7 @@ public class PlayerBehaviour : MonoBehaviour {
                 hasSmallPot = false;
                 hasLargePot = false;
 
-                modifier = mediumPotMultiplier;
+                speedModifier = mediumPotMultiplier;
 
                 SpawnPots.spawnMediumPot = true;
                 SpawnPots.mediumTime = potRechargeTime;
@@ -164,7 +164,7 @@ public class PlayerBehaviour : MonoBehaviour {
                 hasSmallPot = false;
                 hasMediumPot = false;
 
-                modifier = largePotMultiplier;
+                speedModifier = largePotMultiplier;
 
                 SpawnPots.spawnLargePot = true;
                 SpawnPots.largeTime = potRechargeTime;
