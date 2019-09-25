@@ -12,7 +12,6 @@ public class ScoreKeeper : MonoBehaviour {
 
     void Start() {
         score = 0;
-        Debug.Log(PlayerPrefs.GetInt("Highscore"));
         hightScore = PlayerPrefs.GetInt("Highscore");
     }
 

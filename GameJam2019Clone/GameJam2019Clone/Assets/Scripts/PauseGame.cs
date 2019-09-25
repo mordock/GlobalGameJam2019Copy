@@ -5,7 +5,7 @@ using UnityEngine;
 public class PauseGame : MonoBehaviour {
     public bool isPaused = false;
 
-    public GameObject canvas;
+    public GameObject pauseCanvas;
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
@@ -17,11 +17,11 @@ public class PauseGame : MonoBehaviour {
         if (isPaused) {
             Time.timeScale = 1;
             isPaused = false;
-            canvas.SetActive(false);
+            pauseCanvas.SetActive(false);
         } else {
             Time.timeScale = 0;
             isPaused = true;
-            canvas.SetActive(true);
+            pauseCanvas.SetActive(true);
         }
     }
 }

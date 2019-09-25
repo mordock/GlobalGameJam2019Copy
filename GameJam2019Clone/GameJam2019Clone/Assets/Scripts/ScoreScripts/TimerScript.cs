@@ -4,22 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class TimerScript : MonoBehaviour {
-    private float currentTime = 90f;
+    public float currentTime = 90f;
     public float totalTime = 90f;
-    public Text text;
-    public Text endGameTextScore;
-    public Text endGameTextHighScore;
-
-    public GameObject endGameCanvas;
-    public GameObject staticCanvas;
+    private Text timerText;
 
     private int scoreValue;
     private int highscoreValue;
 
-    private void Start() {
+    private void Start()
+    {
+        timerText = gameObject.GetComponent<Text>();
+
         currentTime = totalTime;
-        endGameCanvas.SetActive(false);
-        staticCanvas.SetActive(true);
     }
 
     // Update is called once per frame
@@ -29,17 +25,9 @@ public class TimerScript : MonoBehaviour {
         highscoreValue = ScoreKeeper.hightScore;
         if (currentTime <= 0) {
             Time.timeScale = 0;
-            endGameCanvas.SetActive(true);
-            staticCanvas.SetActive(false);
-            SetEndGameScore();
             CheckHighScore();
         }
-        text.text = currentTime.ToString("0"); ;
-    }
-
-    public void SetEndGameScore() {
-        endGameTextScore.text = scoreValue.ToString();
-        endGameTextHighScore.text = highscoreValue.ToString();
+        timerText.text = currentTime.ToString("0"); ;
     }
 
     public void CheckHighScore() {

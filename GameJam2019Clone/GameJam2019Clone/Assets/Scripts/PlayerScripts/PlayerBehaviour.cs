@@ -9,8 +9,6 @@ public class PlayerBehaviour : MonoBehaviour {
     private AudioSource audioSource;
     private Animator animator;
 
-    private GameObject fObject;
-
     private float speedModifier;
 
     [Header("Floats")]
@@ -29,7 +27,6 @@ public class PlayerBehaviour : MonoBehaviour {
     public bool hasLargePot = false;
 
     [Header("---------")]
-    public bool isFobject = false;
     public bool facingRight = false;
     public bool isOnBoat = false;
 
@@ -37,9 +34,6 @@ public class PlayerBehaviour : MonoBehaviour {
     public float smallPotMultiplier = .8f;
     public float mediumPotMultiplier = .6f;
     public float largePotMultiplier = .4f;
-
-    [Header("GameObjects")]
-    public GameObject fPrefab;
 
     [Header("Sounds")]
     public AudioClip moving10;
@@ -62,7 +56,7 @@ public class PlayerBehaviour : MonoBehaviour {
         rigidbody2D = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
-        animation = this.gameObject.GetComponent<Animation>();
+        animation = GetComponent<Animation>();
 
         //fill pot variables so they can be picked up
         FindPots();
@@ -184,15 +178,6 @@ public class PlayerBehaviour : MonoBehaviour {
                 }
             }
         }
-
-        //make sure the F stays the correct way
-        if (isFobject) {
-            if (facingRight) {
-                fObject.transform.localScale = new Vector3(-1, 1, 1);
-            } else {
-                fObject.transform.localScale = new Vector3(1, 1, 1);
-            }
-        }
     }
 
     //P walking sound
@@ -243,7 +228,7 @@ public class PlayerBehaviour : MonoBehaviour {
     }
 
     //add a pot to the player if one excists in the scene
-    void FindPots() {
+    private void FindPots() {
         smallPot = GameObject.Find("SmallPotPrefab");
         mediumPot = GameObject.Find("MediumPotPrefab");
         largePot = GameObject.Find("LargePotPrefab");
@@ -254,21 +239,12 @@ public class PlayerBehaviour : MonoBehaviour {
         //check if you are touching the pots
         if (collision.CompareTag("SmallPot")) {
             canPickUpSmallPot = true;
-            //spawn floating F
-            fObject = Instantiate(fPrefab, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 5), Quaternion.identity, transform);
-            isFobject = true;
         }
         if (collision.CompareTag("MediumPot")) {
             canPickUpMediumPot = true;
-            //spawn floating F
-            fObject = Instantiate(fPrefab, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 5), Quaternion.identity, transform);
-            isFobject = true;
         }
         if (collision.CompareTag("LargePot")) {
             canPickUpLargePot = true;
-            //spawn floating F
-            fObject = Instantiate(fPrefab, new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 5), Quaternion.identity, transform);
-            isFobject = true;
         }
 
         //check if standing on the boat
@@ -283,8 +259,6 @@ public class PlayerBehaviour : MonoBehaviour {
         canPickUpSmallPot = false;
         canPickUpMediumPot = false;
         canPickUpLargePot = false;
-        isFobject = false;
-        Destroy(fObject);
 
         //check if exiting boat
         if (other.gameObject.tag.Equals("Boat")) {
