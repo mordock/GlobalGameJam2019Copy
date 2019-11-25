@@ -19,7 +19,7 @@ MonoBehaviour:
     Run FMOD project\Pottery Run FMOD project.fspro
   SourceProjectPathUnformatted: C:\Users\Max\Desktop\GameJam2019Copy\GameJam2019Clone\Pottery
     Run FMOD project\Pottery Run FMOD project.fspro
-  SourceBankPathUnformatted: C:\Users\Max\Desktop\GameJam2019Copy\GameJam2019Clone\Pottery
+  SourceBankPathUnformatted: D:\GlobalGameJams\2019\GlobalGameJam2019UnityGIT\GameJam2019Clone\Pottery
     Run FMOD project\Metadata\Bank
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -78,7 +78,10 @@ MonoBehaviour:
   - Platform: 20
     Value: 32
   Plugins: []
-  MasterBanks: []
-  Banks: []
+  MasterBanks:
+  - Master
+  - Master
+  Banks:
+  - Master.strings
   BanksToLoad: []
   LiveUpdatePort: 9264

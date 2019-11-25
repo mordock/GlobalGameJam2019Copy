@@ -11,6 +11,8 @@ public class PlayerBehaviour : MonoBehaviour {
 
     private float speedModifier;
 
+    private bool isOnBoat = false;
+
     [Header("Floats")]
     public float speed = 20;
     public float potRechargeTime = 5f;
@@ -22,13 +24,18 @@ public class PlayerBehaviour : MonoBehaviour {
     public bool canPickUpMediumPot = false;
     public bool canPickUpLargePot = false;
 
+    [Header("Pots")]
+    public GameObject smallPot;
+    public GameObject mediumPot;
+    public GameObject largePot;
+
+    public int smallPotPoints;
+    public int mediumPotPoints;
+    public int largePotPoints;
+
     public bool hasSmallPot = false;
     public bool hasMediumPot = false;
     public bool hasLargePot = false;
-
-    [Header("---------")]
-    public bool facingRight = false;
-    public bool isOnBoat = false;
 
     [Header("Speed multipliers")]
     public float smallPotMultiplier = .8f;
@@ -43,14 +50,8 @@ public class PlayerBehaviour : MonoBehaviour {
     public List<AudioClip> rockHitSounds;
     public List<AudioClip> potLiftSounds;
 
-    [Header("Pots")]
-    public GameObject smallPot;
-    public GameObject mediumPot;
-    public GameObject largePot;
-
-    public int smallPotPoints;
-    public int mediumPotPoints;
-    public int largePotPoints;
+    [Header("---------")]
+    public bool facingRight = false;
 
     void Start() {
         rigidbody2D = GetComponent<Rigidbody2D>();
