@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 95736013086213112}
   - component: {fileID: 111572638563886134}
   - component: {fileID: 82259901004403844}
+  - component: {fileID: 497594396}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -105,22 +106,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  potRechargeTime: 5
+  potRechargeTime: 4
   rockPushVelocity: 30
   crabPushVelocity: 80
   canPickUpSmallPot: 0
   canPickUpMediumPot: 0
   canPickUpLargePot: 0
+  smallPot: {fileID: 1057811713549680, guid: c1ec9df67c7310e47a36d3477acde5cb, type: 3}
+  mediumPot: {fileID: 1731050170249370, guid: 61d6866bb33c247418c5708d41ed3e1f, type: 3}
+  largePot: {fileID: 1132661742353574, guid: 01a6a56ad3fedff4bb9ba485c0e6529d, type: 3}
+  smallPotPoints: 10
+  mediumPotPoints: 20
+  largePotPoints: 30
   hasSmallPot: 0
   hasMediumPot: 0
   hasLargePot: 0
-  isFobject: 0
-  facingRight: 0
-  isOnBoat: 0
   smallPotMultiplier: 0.9
   mediumPotMultiplier: 0.75
   largePotMultiplier: 0.6
-  fPrefab: {fileID: 4029962043388542282, guid: 0ce992c9f056fd64c924e13029fd9a04, type: 3}
   moving10: {fileID: 8300000, guid: 9d7721d2ecc910a45b9e7593530fba52, type: 3}
   moving6: {fileID: 8300000, guid: c3c5d262605461c44a1274c26aef0d06, type: 3}
   moving4: {fileID: 8300000, guid: 12cb88a88e178e047a3158485ab13301, type: 3}
@@ -135,12 +138,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2744622fbffe880498cede8a18e08ba9, type: 3}
   - {fileID: 8300000, guid: 0f3f6518ed19cb749828c1f4f4da41b8, type: 3}
   - {fileID: 8300000, guid: 483d2663744b40149bd8630a35c388ac, type: 3}
-  smallPot: {fileID: 1057811713549680, guid: c1ec9df67c7310e47a36d3477acde5cb, type: 3}
-  mediumPot: {fileID: 1731050170249370, guid: 61d6866bb33c247418c5708d41ed3e1f, type: 3}
-  largePot: {fileID: 1132661742353574, guid: 01a6a56ad3fedff4bb9ba485c0e6529d, type: 3}
-  smallPotPoints: 10
-  mediumPotPoints: 20
-  largePotPoints: 30
+  facingRight: 1
 --- !u!114 &4886800065435057153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,3 +374,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &497594396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401718833864770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5c7863fd0cc24cddafe1023336ab7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravel: 0
+  wood: 0
+  water: 0
+  walkingspeed: 0.25

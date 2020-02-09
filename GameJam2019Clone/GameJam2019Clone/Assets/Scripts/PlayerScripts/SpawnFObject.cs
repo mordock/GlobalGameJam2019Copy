@@ -28,7 +28,7 @@ public class SpawnFObject : MonoBehaviour {
 
     //check if on a pot
     void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.CompareTag("SmallPot") || collider.CompareTag("MediumPot") || collider.CompareTag("LargePot")) {
+        if (collider.CompareTag("SmallPot") || collider.CompareTag("MediumPot") || collider.CompareTag("LargePot") || collider.CompareTag("Boat")) {
             fObject = Instantiate(fPrefab,
                 new Vector3(transform.position.x, transform.position.y + 2, transform.position.z - 5),
                 Quaternion.identity, transform);
