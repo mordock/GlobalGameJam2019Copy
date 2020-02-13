@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 407213736662939324}
   - component: {fileID: 407213736662939327}
   - component: {fileID: 407213736662939315}
+  - component: {fileID: 1730244631174586578}
   m_Layer: 0
   m_Name: Crab
   m_TagString: Crab
@@ -59,6 +60,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -133,3 +135,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.1
+--- !u!114 &1730244631174586578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407213736662939326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb0981d7175e482baed5ded332b6ffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

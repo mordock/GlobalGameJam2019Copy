@@ -41,6 +41,19 @@ public class FootstepsManager : MonoBehaviour
             wood = true;
             water = false;
         }
+        else if (collision.gameObject.tag == "Water")
+        {
+            gravel = false;
+            wood = false;
+            water = true;
+        }
+        else
+        {
+            gravel = true;
+            wood = false;
+            water = false;
+        }
+
     }
 
 

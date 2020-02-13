@@ -1479,6 +1479,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 931242082}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &497594398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497594387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &514273919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2885,6 +2898,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 867943459}
+  - component: {fileID: 867943458}
   - component: {fileID: 867943460}
   m_Layer: 0
   m_Name: BackgroundMusic
@@ -2893,6 +2907,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &867943458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867943457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c318be970860a4ed3a5a418ac9bc9dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &867943459
 Transform:
   m_ObjectHideFlags: 0
@@ -2916,20 +2942,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 867943457}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f9510e5e124b4e0c897fcecfd37fa8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/Gameplay Music
-  PlayEvent: 1
-  StopEvent: 2
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1 &874326105
 GameObject:
   m_ObjectHideFlags: 0
@@ -3218,6 +3233,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 82259901004403844, guid: feacabe4dd55fe84e97eb594cda32884,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feacabe4dd55fe84e97eb594cda32884, type: 3}
@@ -6132,7 +6152,7 @@ GameObject:
   - component: {fileID: 1928368130}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

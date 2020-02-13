@@ -130,6 +130,8 @@ public class PlayerBehaviour : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.F)) {
             if (canPickUpSmallPot) {
                 Destroy(smallPot);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Pot lift");
+
 
                 hasSmallPot = true;
                 hasMediumPot = false;
@@ -142,6 +144,8 @@ public class PlayerBehaviour : MonoBehaviour {
             }
             if (canPickUpMediumPot) {
                 Destroy(mediumPot);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Pot lift");
+
 
                 hasMediumPot = true;
                 hasSmallPot = false;
@@ -154,6 +158,8 @@ public class PlayerBehaviour : MonoBehaviour {
             }
             if (canPickUpLargePot) {
                 Destroy(largePot);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Pot lift");
+
 
                 hasLargePot = true;
                 hasSmallPot = false;
@@ -169,12 +175,15 @@ public class PlayerBehaviour : MonoBehaviour {
             if (isOnBoat) {
                 if (hasSmallPot) {
                     ScoreKeeper.IncreaseScore(smallPotPoints);
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Pot deliver");
                     hasSmallPot = false;
                 } else if (hasMediumPot) {
                     ScoreKeeper.IncreaseScore(mediumPotPoints);
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Pot deliver");
                     hasMediumPot = false;
                 } else if (hasLargePot) {
                     ScoreKeeper.IncreaseScore(largePotPoints);
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Pot deliver");
                     hasLargePot = false;
                 }
             }
