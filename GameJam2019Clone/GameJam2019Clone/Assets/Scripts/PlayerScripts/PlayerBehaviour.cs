@@ -310,7 +310,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
         if (collision.gameObject.tag.Equals("Crab"))
         {
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Damage");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Crab Damage");
             Vector3 direction = transform.position - collision.gameObject.transform.position;
             direction.Normalize();
             rigidbody2D.velocity = direction * crabPushVelocity;
