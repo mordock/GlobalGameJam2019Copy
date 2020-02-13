@@ -88,7 +88,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/pat/Unity Projects/GameJam2019Clone/GameJam2019Clone/Pottery Run FMOD
     project/Build/Desktop/Master.strings.bank
-  lastModified: 637171089890000000
+  lastModified: 637171946290000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -147,6 +147,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Water
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-6723917116574396956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Gravel
   Min: 0
   Max: 1
   Default: 0
@@ -303,6 +320,40 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 94733
+--- !u!114 &-3504966795068792526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Water
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-3441117338835754411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Water
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-3412198059000442466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/pat/Unity Projects/GameJam2019Clone/GameJam2019Clone/Pottery Run FMOD
     project/Build/Desktop/Master.bank
-  lastModified: 637171089890000000
+  lastModified: 637171946290000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -447,12 +498,29 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -772848741666396863}
-  - {fileID: -8556483264207288864}
-  - {fileID: -6597823393340512233}
+  - {fileID: -3441117338835754411}
+  - {fileID: 998576354080770384}
+  - {fileID: 254136055095609462}
   MinDistance: 0
   MaxDistance: 0
   Length: 520
+--- !u!114 &-172416292705524054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Gravel
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,7 +553,7 @@ MonoBehaviour:
   - {fileID: -3012198622446812037}
   StringsBanks:
   - {fileID: -8216539320934101516}
-  stringsBankWriteTime: 637171089890000000
+  stringsBankWriteTime: 637171946290000000
   cacheVersion: 3
 --- !u!114 &114031928038278176
 MonoBehaviour:
@@ -1220,6 +1288,40 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 190381
+--- !u!114 &254136055095609462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Wood
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &651724236619141963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Wood
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &772554594971408309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,6 +1335,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Water
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &998576354080770384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Gravel
   Min: 0
   Max: 1
   Default: 0
@@ -1416,6 +1535,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2060
+--- !u!114 &5440527767771556074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Wood
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &6128752670733958067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1463,6 +1599,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2200
+--- !u!114 &7357248055247252396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Water
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &7785090468172570111
 MonoBehaviour:
   m_ObjectHideFlags: 0
