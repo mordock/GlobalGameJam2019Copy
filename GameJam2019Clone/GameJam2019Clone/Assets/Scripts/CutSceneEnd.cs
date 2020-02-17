@@ -2,9 +2,10 @@
 
 public class CutSceneEnd : MonoBehaviour
 {
+    public int levelToLoad;
     private void OnEnable() {
         LevelChanger.startFade = true;
-        LevelChanger.levelToLoad = 2;
+        LevelChanger.levelToLoad = levelToLoad;
     }
 
     public void LoadOptions() {
