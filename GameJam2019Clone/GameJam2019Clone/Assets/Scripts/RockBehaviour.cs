@@ -34,6 +34,7 @@ public class RockBehaviour : MonoBehaviour {
         if (Vector3.Distance(transform.position, targetPos) <= 0.1f) {
             Destroy(this.gameObject);
             Destroy(newShadow);
+            //FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Rock Hit", gameObject);
         }
     }
 }

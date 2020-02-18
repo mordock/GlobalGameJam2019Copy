@@ -13,6 +13,7 @@ TagManager:
   - Boat
   - Crab
   - Gravel
+  - Water
   layers:
   - Default
   - TransparentFX

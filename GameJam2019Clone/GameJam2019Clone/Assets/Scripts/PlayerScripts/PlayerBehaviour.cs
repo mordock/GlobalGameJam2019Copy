@@ -130,6 +130,8 @@ public class PlayerBehaviour : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.F)) {
             if (canPickUpSmallPot) {
                 Destroy(smallPot);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Pot lift");
+
 
                 hasSmallPot = true;
                 hasMediumPot = false;
@@ -142,6 +144,8 @@ public class PlayerBehaviour : MonoBehaviour {
             }
             if (canPickUpMediumPot) {
                 Destroy(mediumPot);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Pot lift");
+
 
                 hasMediumPot = true;
                 hasSmallPot = false;
@@ -154,6 +158,8 @@ public class PlayerBehaviour : MonoBehaviour {
             }
             if (canPickUpLargePot) {
                 Destroy(largePot);
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Pot lift");
+
 
                 hasLargePot = true;
                 hasSmallPot = false;
@@ -169,12 +175,15 @@ public class PlayerBehaviour : MonoBehaviour {
             if (isOnBoat) {
                 if (hasSmallPot) {
                     ScoreKeeper.IncreaseScore(smallPotPoints);
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Pot deliver");
                     hasSmallPot = false;
                 } else if (hasMediumPot) {
                     ScoreKeeper.IncreaseScore(mediumPotPoints);
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Pot deliver");
                     hasMediumPot = false;
                 } else if (hasLargePot) {
                     ScoreKeeper.IncreaseScore(largePotPoints);
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/Pot deliver");
                     hasLargePot = false;
                 }
             }
@@ -222,7 +231,21 @@ public class PlayerBehaviour : MonoBehaviour {
         }
     }
 
-    private void DropPots() {
+    private void DropPots()
+    {
+        if(hasSmallPot == true)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Pot Break");
+        }
+        else if(hasMediumPot == true)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Pot Break");
+        }
+        else if (hasLargePot == true)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Pot Break");
+        }
+
         hasSmallPot = false;
         hasMediumPot = false;
         hasLargePot = false;
@@ -271,8 +294,9 @@ public class PlayerBehaviour : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D collision) {
         //collide with rock
         if (collision.gameObject.tag.Equals("Rock")) {
-            audioSource.clip = rockHitSounds[Random.Range(0, rockHitSounds.Count)];
-            audioSource.Play();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Rock Hit");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Damage");
+
 
             //calculate direction to be knocked back to
             Vector3 direction = transform.position - collision.gameObject.transform.position;
@@ -286,6 +310,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
         if (collision.gameObject.tag.Equals("Crab"))
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Crab Damage");
             Vector3 direction = transform.position - collision.gameObject.transform.position;
             direction.Normalize();
             rigidbody2D.velocity = direction * crabPushVelocity;

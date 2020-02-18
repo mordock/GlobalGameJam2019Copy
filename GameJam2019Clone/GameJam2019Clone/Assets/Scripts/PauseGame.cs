@@ -18,10 +18,13 @@ public class PauseGame : MonoBehaviour {
             Time.timeScale = 1;
             isPaused = false;
             pauseCanvas.SetActive(false);
+            MusicPlayer.music.setPaused(false);
         } else {
             Time.timeScale = 0;
             isPaused = true;
             pauseCanvas.SetActive(true);
+            MusicPlayer.music.setPaused(true);
+
         }
     }
 }
