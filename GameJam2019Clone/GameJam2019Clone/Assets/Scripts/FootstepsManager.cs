@@ -5,104 +5,80 @@ using UnityEngine;
 public class FootstepsManager : MonoBehaviour
 {
     FMOD.Studio.EventInstance FootstepsInst;
-
-    //whichever surface the player is on gets set to true
-    public bool gravel;
-    public bool wood;
-    public bool water;
+    public GameObject Player;
+    private PlayerBehaviour pb;
 
     bool playerismoving;
-    public float walkingspeed;
 
-    private void FixedUpdate()
+    public float walkingspeed;
+    private float MaterialValue;
+
+    
+    private void OnTriggerStay2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Gravel")
+        {
+            MaterialValue = 1;
+        }
+        else if (collision.gameObject.tag == "Water")
+        {
+            MaterialValue = 2;
+        }
+        else if (collision.gameObject.tag == "Boat")
+        {
+            MaterialValue = 3;
+        }
+        else
+        {
+            MaterialValue = 1;
+        }
+    }
+
+    private void CallFootsteps()
+    {
+
+        if (playerismoving == true)
+        {
+            FootstepsInst.setParameterByName("Material", MaterialValue, false);
+            FootstepsInst.start();
+        }
+    }
+
+    private void Start()
+    {
+        pb = gameObject.GetComponent<PlayerBehaviour>();
+        InvokeRepeating("CallFootsteps", 0, walkingspeed);
+        FootstepsInst = FMODUnity.RuntimeManager.CreateInstance("event:/Footsteps New");
+    }
+
+    private void Update()
+    {
+        Debug.Log(walkingspeed);
+
+
+
+        if (pb.hasMediumPot == true)
+            walkingspeed = 0.5f;
+        else if (pb.hasLargePot == true)
+            walkingspeed = 0.7f;
+        else walkingspeed = 0.25f;
+
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
         {
             playerismoving = true;
+            //InvokeRepeating("CallFootsteps", 0, walkingspeed);
         }
         else
         {
             playerismoving = false;
         }
     }
-    //sets correct surface boolean to true based on surface
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Gravel")
-        {
-            gravel = true;
-            wood = false;
-            water = false;
-
-        }
-        else if (collision.gameObject.tag == "Boat")
-        {
-            gravel = false;
-            wood = true;
-            water = false;
-        }
-        else if (collision.gameObject.tag == "Water")
-        {
-            gravel = false;
-            wood = false;
-            water = true;
-        }
-        else
-        {
-            gravel = true;
-            wood = false;
-            water = false;
-        }
-
-    }
-
-
-    //sets the FMOD parameter to the correct surface
-    void UpdateSurface()
-    {
-        if (gravel == true)
-        {
-            FootstepsInst.setParameterByName("Gravel", 1f, false);
-            FootstepsInst.setParameterByName("Wood", 0f, false);
-            FootstepsInst.setParameterByName("Water", 0f, false);
-        }
-        else if (wood == true)
-
-        {
-            FootstepsInst.setParameterByName("Gravel", 0f, false);
-            FootstepsInst.setParameterByName("Wood", 1f, false);
-            FootstepsInst.setParameterByName("Water", 0f, false);
-        }
-        else if (water == true)
-
-        {
-            FootstepsInst.setParameterByName("Gravel", 0f, false);
-            FootstepsInst.setParameterByName("Wood", 0f, false);
-            FootstepsInst.setParameterByName("Water", 1f, false);
-        }
-    }
-
-    //updates the surface, then plays a footstep event if the player is moving
-    void CallFootsteps ()
-    {
-
-        if (playerismoving == true)
-        {
-            UpdateSurface();
-            FootstepsInst.start();
-
-        }
-    }
-
-    //sets the footstep FMOD event path and 
-    private void Start()
-    {
-        gravel = true;
-        InvokeRepeating("CallFootsteps", 0, walkingspeed);
-        FootstepsInst = FMODUnity.RuntimeManager.CreateInstance("event:/Footsteps");
-    }
     private void OnDisable()
     {
         playerismoving = false;
+    }
+    private void OnDestroy()
+    {
+       FootstepsInst.release();
     }
 }

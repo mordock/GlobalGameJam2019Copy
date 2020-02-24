@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="MixerGroup" id="{bff25e48-d918-42ea-b467-2ffa2c5d752d}">
+		<property name="name">
+			<value>Verb</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{8544579c-41bc-4467-8187-6ef5e7d225fb}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{59ef42fe-2446-4339-a038-44c38ff2ed07}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{880872d5-762e-4586-a74a-51c9134b1445}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{8544579c-41bc-4467-8187-6ef5e7d225fb}">
+		<relationship name="effects">
+			<destination>{0013e462-89fc-49ba-9016-f5a0e43c6e80}</destination>
+			<destination>{039ef54d-e5da-4e8a-a46c-ef13392a7190}</destination>
+			<destination>{2fdb03d5-5aa0-48d0-b4b7-0e98065b5555}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{59ef42fe-2446-4339-a038-44c38ff2ed07}" />
+	<object class="MixerBusFader" id="{0013e462-89fc-49ba-9016-f5a0e43c6e80}" />
+	<object class="ThreeEQEffect" id="{039ef54d-e5da-4e8a-a46c-ef13392a7190}">
+		<property name="midGain">
+			<value>-1</value>
+		</property>
+		<property name="highGain">
+			<value>-3</value>
+		</property>
+	</object>
+	<object class="SFXReverbEffect" id="{2fdb03d5-5aa0-48d0-b4b7-0e98065b5555}">
+		<property name="diffusion">
+			<value>34.5</value>
+		</property>
+		<property name="wetLevel">
+			<value>-21</value>
+		</property>
+	</object>
+</objects>

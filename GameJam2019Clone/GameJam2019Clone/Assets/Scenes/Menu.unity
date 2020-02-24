@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 95073114}
   - component: {fileID: 95073113}
   - component: {fileID: 95073112}
+  - component: {fileID: 95073116}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -343,6 +344,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 95073116}
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &95073114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +397,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 95073110}
   m_CullTransparentMesh: 0
+--- !u!114 &95073116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95073110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cced137d835374f21994aed3e641e10b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventPath: event:/UI back
 --- !u!1 &293886408
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +423,7 @@ GameObject:
   - component: {fileID: 293886410}
   - component: {fileID: 293886412}
   - component: {fileID: 293886413}
+  - component: {fileID: 293886414}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -520,6 +546,17 @@ MonoBehaviour:
           m_StringArgument: Cutscene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 293886414}
+        m_MethodName: PlaySound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &293886413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,6 +573,19 @@ MonoBehaviour:
   growthBound: 1.3
   shrinkBound: 1
   text: {fileID: 293886410}
+--- !u!114 &293886414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293886408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cced137d835374f21994aed3e641e10b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventPath: event:/UI confirm
 --- !u!1 &434257722
 GameObject:
   m_ObjectHideFlags: 0

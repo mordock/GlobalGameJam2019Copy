@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{d991b995-725f-428f-8c93-18f917f8da91}">
+		<property name="name">
+			<value>Bus Volume</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7ee9f93b-0c30-4ba9-93f1-6cb0666bcdba}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{721a8918-2fd6-4f58-a2a5-ccf44f503e0f}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{721a8918-2fd6-4f58-a2a5-ccf44f503e0f}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
