@@ -9,6 +9,7 @@ public class AmbiancePlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Volcano gameplay");
         ambiance = FMODUnity.RuntimeManager.CreateInstance("event:/Gameplay Ambiance");
         ambiance.start();
         ambiance.release();

@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{66912d14-86f3-4719-8a66-220047f6b3da}">
 		<property name="assetPath">
-			<value>Pottery Run Gameplay Ambiance.wav</value>
+			<value>SFX/Ambiances/Pottery Run Gameplay Ambiance.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
