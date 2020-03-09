@@ -15,12 +15,12 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: C:\Users\Max\Desktop\GameJam2019Clone (copy)\GameJam2019Clone
-    (copy)\GameJam2019Clone\Pottery Run FMOD project\Pottery Run FMOD project.fspro
-  SourceProjectPathUnformatted: C:\Users\Max\Desktop\GameJam2019Clone (copy)\GameJam2019Clone
-    (copy)\GameJam2019Clone\Pottery Run FMOD project\Pottery Run FMOD project.fspro
-  SourceBankPathUnformatted: C:\Users\Max\Desktop\GameJam2019Clone (copy)\GameJam2019Clone
-    (copy)\GameJam2019Clone\Pottery Run FMOD project\Build
+  sourceProjectPath: C:\Users\Max\Desktop\GameJam2019Copy\GameJam2019Clone\Pottery
+    Run FMOD project\Pottery Run FMOD project.fspro
+  SourceProjectPathUnformatted: C:\Users\Max\Desktop\GameJam2019Copy\GameJam2019Clone\Pottery
+    Run FMOD project\Pottery Run FMOD project.fspro
+  SourceBankPathUnformatted: C:\Users\Max\Desktop\GameJam2019Copy\GameJam2019Clone\Pottery
+    Run FMOD project\Build
   AutomaticEventLoading: 1
   BankLoadType: 0
   AutomaticSampleLoading: 0

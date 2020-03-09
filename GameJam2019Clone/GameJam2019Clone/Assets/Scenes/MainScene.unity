@@ -323,7 +323,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 20
-    m_MaxSize: 50
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2368,7 +2368,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Menu
+          m_StringArgument: EndCutscene
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 644281145}
@@ -2428,9 +2428,9 @@ RectTransform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.1133053, y: 0.098653674}
-  m_AnchoredPosition: {x: -11.5, y: -0.11999512}
-  m_SizeDelta: {x: 22, y: 0.099975586}
+  m_AnchorMax: {x: 0.10977463, y: 0.098653674}
+  m_AnchoredPosition: {x: -13.5, y: -0.11999512}
+  m_SizeDelta: {x: 26, y: 0.099975586}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &673680700
 MonoBehaviour:
@@ -3117,7 +3117,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 20
-    m_MaxSize: 50
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -4641,7 +4641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1440646490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5538,7 +5538,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 20
-    m_MaxSize: 50
+    m_MaxSize: 100
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
