@@ -278,7 +278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302243612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -67.95, y: -5.7150006, z: -13}
+  m_LocalPosition: {x: -59.524998, y: -5.7150006, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1874079571}
@@ -665,6 +665,62 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &567095239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 567095241}
+  - component: {fileID: 567095240}
+  - component: {fileID: 567095242}
+  m_Layer: 0
+  m_Name: Ambiance Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &567095240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567095239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9510e5e124b4e0c897fcecfd37fa8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &567095241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567095239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.22855169}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &567095242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567095239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 208e71ee75ff541cd9dd99b1d1219b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &629387030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1032,14 +1088,14 @@ PlayableDirector:
     value: {fileID: 1391751101}
   - key: {fileID: 114619302455899834, guid: 661e74793348e824b93d8a2862e149cf, type: 2}
     value: {fileID: 519420030}
-  - key: {fileID: 114287267173995736, guid: 661e74793348e824b93d8a2862e149cf, type: 2}
-    value: {fileID: 0}
   - key: {fileID: 114685749213777184, guid: 661e74793348e824b93d8a2862e149cf, type: 2}
     value: {fileID: 497594391}
   - key: {fileID: 114415434793496752, guid: 661e74793348e824b93d8a2862e149cf, type: 2}
     value: {fileID: 1391751101}
   - key: {fileID: -9207970931940085779, guid: 661e74793348e824b93d8a2862e149cf, type: 2}
     value: {fileID: 550935256}
+  - key: {fileID: -3843850082840468504, guid: 661e74793348e824b93d8a2862e149cf, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 1a4e8f48cbcd0ac4db441a82e3ecfe0a: {fileID: 0}
