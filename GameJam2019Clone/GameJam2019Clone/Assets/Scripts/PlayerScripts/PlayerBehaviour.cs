@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBehaviour : MonoBehaviour {
+public class PlayerBehaviour : MonoBehaviour
+{
     private new Rigidbody2D rigidbody2D;
     new Animation animation;
 
@@ -18,7 +19,7 @@ public class PlayerBehaviour : MonoBehaviour {
     public float potRechargeTime = 5f;
     public float rockPushVelocity;
     public float crabPushVelocity;
-    
+
     [Header("Bools")]
     public bool canPickUpSmallPot = false;
     public bool canPickUpMediumPot = false;
@@ -82,8 +83,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
         }
 
-        if (!hasLargePot && !hasMediumPot && !hasSmallPot)
-        {
+        if (!hasLargePot && !hasMediumPot && !hasSmallPot) {
             speedModifier = 1;
         }
 
@@ -93,31 +93,6 @@ public class PlayerBehaviour : MonoBehaviour {
         } else {
             IdleAnimation("IdlePot");
         }
-
-        //P separate sound input because of GetKey
-        /* if (Input.GetKeyDown(KeyCode.A)) {
-             if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
-                 PlayWalkingSound(moving10);
-             } else if (hasSmallPot) {
-                 //this moving sounds was lost, ask Pat for sound
-             } else if (hasMediumPot) {
-                 PlayWalkingSound(moving6);
-             } else if (hasLargePot) {
-                 PlayWalkingSound(moving4);
-             }
-         }
-         if (Input.GetKeyDown(KeyCode.D)) {
-             if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
-                 PlayWalkingSound(moving10);
-             } else if (hasSmallPot) {
-                 //this moving sounds was lost, ask Pat for sound
-             } else if (hasMediumPot) {
-                 PlayWalkingSound(moving6);
-             } else if (hasLargePot) {
-                 PlayWalkingSound(moving4);
-             }
-         }
-         */
 
         //walking animation
         if (!hasSmallPot && !hasMediumPot && !hasLargePot) {
@@ -190,13 +165,6 @@ public class PlayerBehaviour : MonoBehaviour {
         }
     }
 
-    //P walking sound
-    /*public void PlayWalkingSound(AudioClip audioClip) {
-        audioSource.clip = audioClip;
-        audioSource.loop = true;
-        audioSource.Play();
-    }
-    */
     //walking animation
     public void WalkingAnimation(string animation) {
         if (Input.GetKey(KeyCode.A)) {
@@ -214,7 +182,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
     //standing still
     public void IdleAnimation(string animationToPlay) {
-        if (!Input.anyKey ) {
+        if (!Input.anyKey) {
             animation.Stop("Walking");
             animation.Stop("WalkingPot");
             animation.Stop("Idle");
@@ -231,18 +199,12 @@ public class PlayerBehaviour : MonoBehaviour {
         }
     }
 
-    private void DropPots()
-    {
-        if(hasSmallPot == true)
-        {
+    private void DropPots() {
+        if (hasSmallPot == true) {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Pot Break");
-        }
-        else if(hasMediumPot == true)
-        {
+        } else if (hasMediumPot == true) {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Pot Break");
-        }
-        else if (hasLargePot == true)
-        {
+        } else if (hasLargePot == true) {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Pot Break");
         }
 
@@ -308,8 +270,7 @@ public class PlayerBehaviour : MonoBehaviour {
             DropPots();
         }
 
-        if (collision.gameObject.tag.Equals("Crab"))
-        {
+        if (collision.gameObject.tag.Equals("Crab")) {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Crab Damage");
             Vector3 direction = transform.position - collision.gameObject.transform.position;
             direction.Normalize();

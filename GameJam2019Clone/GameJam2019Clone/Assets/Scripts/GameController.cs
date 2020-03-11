@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameController : MonoBehaviour {
     public GameObject endGameCanvas;
@@ -10,10 +8,5 @@ public class GameController : MonoBehaviour {
         endGameCanvas.SetActive(false);
         staticCanvas.SetActive(true);
         Time.timeScale = 1;
-    }
-
-    // Update is called once per frame
-    void Update() {
-
     }
 }

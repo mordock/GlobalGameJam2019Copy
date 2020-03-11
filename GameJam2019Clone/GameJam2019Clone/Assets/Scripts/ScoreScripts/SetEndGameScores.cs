@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Timers;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class SetEndGameScores : MonoBehaviour {
@@ -15,14 +12,12 @@ public class SetEndGameScores : MonoBehaviour {
 
     private int scoreValue;
     private int highscoreValue;
-    // Start is called before the first frame update
     void Start() {
         timerScript = GetComponent<TimerScript>();
         endGameCanvas.SetActive(false);
         staticCanvas.SetActive(true);
     }
 
-    // Update is called once per frame
     void Update() {
         scoreValue = ScoreKeeper.score;
         highscoreValue = ScoreKeeper.hightScore;

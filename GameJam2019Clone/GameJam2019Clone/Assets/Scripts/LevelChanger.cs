@@ -7,17 +7,12 @@ public class LevelChanger : MonoBehaviour
 
     public static bool startFade = false;
     public static int levelToLoad;
-
-    //private int levelToLoad;
-
     private void Start() {
         startFade = false;
         Time.timeScale = 1;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         if (startFade) {
             FadeToLevel();
         }
