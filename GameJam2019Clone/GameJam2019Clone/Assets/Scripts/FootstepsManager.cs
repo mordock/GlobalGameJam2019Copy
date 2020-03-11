@@ -46,17 +46,13 @@ public class FootstepsManager : MonoBehaviour
 
     private void Start()
     {
-        pb = gameObject.GetComponent<PlayerBehaviour>();
         InvokeRepeating("CallFootsteps", 0, walkingspeed);
+        pb = gameObject.GetComponent<PlayerBehaviour>();
         FootstepsInst = FMODUnity.RuntimeManager.CreateInstance("event:/Footsteps New");
     }
 
     private void Update()
     {
-        Debug.Log(walkingspeed);
-
-
-
         if (pb.hasMediumPot == true)
             walkingspeed = 0.5f;
         else if (pb.hasLargePot == true)
@@ -66,7 +62,6 @@ public class FootstepsManager : MonoBehaviour
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
         {
             playerismoving = true;
-            //InvokeRepeating("CallFootsteps", 0, walkingspeed);
         }
         else
         {
